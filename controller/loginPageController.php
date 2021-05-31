@@ -1,5 +1,5 @@
 <?php
-class loginController extends Controller
+class loginPageController extends Controller
 {
     public function show()
     {

@@ -1,5 +1,5 @@
 <?php
-class signupController extends Controller
+class signupPageController extends Controller
 {
     public function show()
     {
