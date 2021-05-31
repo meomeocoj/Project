@@ -1,5 +1,6 @@
 <?php
-class homePageController extends Controller {
+class homePageController extends Controller
+{
     public function show()
     {
         require 'model/hotel.php';
@@ -8,14 +9,16 @@ class homePageController extends Controller {
         $homePage->hotels = $hotel->getAllHotels();
         echo $homePage;
     }
-    public function search(){
+    public function search($data)
+    {
         require_once 'model/Hotel.php';
         $hotel = new Hotel;
-
-        if isset(){
-            $hotel->getSearchResult();
+        echo $data. '<br>';
+        echo $data[0]. '<br>';
+        $responses = $hotel->getSearchResult($data);
+        
+        foreach ($responses as $response) {
+            echo $response->name;
         }
     }
 }
-
-?>

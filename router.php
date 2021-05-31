@@ -19,7 +19,12 @@ class Router
             $request->controller = "signupPage";
             $request->action = "show";
             $request->params = [];
-        } else
+        } else if (substr($url, 1, 14) == 'Project/search') {
+            $request->controller = "homePage";
+            $request->action = "search";
+            $explode_url = explode('/', $url);
+            $request->params = array_slice($explode_url, 3);
+        }
         //-------------/Project/signup/show
         {
             // $explode_url = explode('/', $url);
@@ -27,7 +32,7 @@ class Router
             // $request->controller = $explode_url[0];
             // $request->action = $explode_url[1];
             // $request->params = array_slice($explode_url, 2);
-            echo 'error 404';
+            // echo 'error 404';
         }
     }
 }
