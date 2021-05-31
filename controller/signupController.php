@@ -1,13 +1,13 @@
 <?php
-class homePageController extends Controller
+class signupController extends Controller
 {
-    public function index()
+    public function show()
     {
         require 'model/user.php';
         $user = new User;
         $signupPage = $this->render("signupPage");
         echo $signupPage;
-        
+
         if (isset($_POST['signup']) == true) {
             $data = array();
             $data['fullname'] = $_POST['fullname'];

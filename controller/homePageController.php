@@ -1,6 +1,6 @@
 <?php
 class homePageController extends Controller {
-    public function index()
+    public function show()
     {
         require 'model/hotel.php';
         $hotel = new Hotel;

@@ -1,76 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="view/css/main.css">
-    <script type="text/javascript" src="view/js/script.js"></script>
-    <title>Homepage</title>
-</head>
-
-<body>
-    <?php include 'header.php';?>
-    <div class="hot-location">
-        <h2>Địa điểm nổi bật</h2>
-        <p>Cùng luxstay bắt đầu cuộc hành trình chinh phục thế giới</p>
-    </div>
-    <!--slide show-->
-    <div class="slideshow-container">
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <a href="#">
-                <div class="numbertext">1 / 3</div>
-                <img src="view/image/HaNoi2.jpg" style="width:100%; height:400px">
-                <div class="text">Hà Nội</div>
-            </a>
-        </div>
-
-        <div class="mySlides fade">
-            <a href="#">
-                <div class="numbertext">2 / 3</div>
-                <img src="view/image/HCMjpg.jpg" style="width:100%; height:400px;">
-                <div class="text">Thành phố Hồ Chí Minh</div>
-            </a>
-        </div>
-
-        <div class="mySlides fade">
-            <a href="#">
-                <div class="numbertext">3 / 3</div>
-                <img src="view/image/location_10_1559303118.png" style="width:100%; height:400px">
-                <div class="text">Vũng Tàu</div>
-            </a>
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-      <!--footer-->
-      <footer class="footer-distributed">
+<footer class="footer-distributed">
         <div class="footer-left">
 
             <h3>Lux<span>Stay</span></h3>
 
             <p class="footer-links">
-                <a href="#">Home</a> ·
-                <a href="#">Blog</a> ·
-                <a href="#">Pricing</a> ·
-                <a href="#">About</a> ·
-                <a href="#">Faq</a> ·
+                <a href="#">Home</a>
+                ·
+                <a href="#">Blog</a>
+                ·
+                <a href="#">Pricing</a>
+                ·
+                <a href="#">About</a>
+                ·
+                <a href="#">Faq</a>
+                ·
                 <a href="#">Contact</a>
             </p>
 
-            <p class="footer-company-name">luxstay &copy; 2021 </p>
+            <p class="footer-company-name">luxstay &copy; 2021  </p>
         </div>
 
         <div class="footer-center">
@@ -95,7 +42,8 @@
         <div class="footer-right">
 
             <p class="footer-company-about">
-                <span>About the company</span> Luxstay là công ty hàng đầu về booking tại Việt Nam
+                <span>About the company</span>
+               Luxstay là công ty hàng đầu về booking tại Việt Nam
             </p>
 
             <div class="footer-icons">
@@ -136,7 +84,4 @@
             </div>
 
         </div>
-    </footer>
-</body>
-
-</html>
+      </footer>
