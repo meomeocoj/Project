@@ -1,4 +1,5 @@
 <?php
+
 $user = new User;
 if (isset($_POST['signup']) == true) {
     $data = array();
@@ -13,7 +14,9 @@ if (isset($_POST['signup']) == true) {
         redirect('index.php', 'Something went wrong', 'error');
     }
 }
-
-$template = new template('templates/signuppage/account_create.php');
+ 
+$template = new template('view/signuppage/account_create.php');
 
 echo $template;
+?>
+
