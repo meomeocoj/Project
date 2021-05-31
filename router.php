@@ -7,9 +7,9 @@ class Router
     {
         $url = trim($url);
 
-        if ($url == '/Project/')
+        if (substr($url,1) == 'Project/')
         {
-            $request->controller = "crud";
+            $request->controller = "homePage";
             $request->action = "index";
             $request->params = [];
         }

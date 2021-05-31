@@ -23,17 +23,16 @@ class Template
     public function __toString()
     {
         extract($this->vars); //extract into local symbol table [a=>1,b=>2,c=>3] ->> a = 1, ...
-        //how to move to another directory
-        //from the current level to this dir
-        chdir(dirname($this->template)); //  templates/frontpage.php --? chdir(templates)
+        //homepage/homePage.php
+        $exploded_dir = explode('/', $this->template);
         
         //dirname return path of the parent's directory
         //chdir: specify a new directory
+        chdir('view/' . $exploded_dir[0]);
         ob_start();
-
-        include basename($this->template);
+        
+        include $exploded_dir[1];
         //$path = "templates/frontpage.php"; --> frontpage.php
-
         return ob_get_clean();
     }
 }
