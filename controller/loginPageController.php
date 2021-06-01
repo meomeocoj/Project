@@ -6,6 +6,7 @@ class loginPageController extends Controller
         require 'model/user.php';
         $user = new User;
         $loginPage = $this->render("loginPage");
+    
         echo $loginPage;
         
     }

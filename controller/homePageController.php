@@ -6,6 +6,7 @@ class homePageController extends Controller
         require 'model/hotel.php';
         $hotel = new Hotel;
         $homePage = $this->render("homePage");
+      
         $homePage->hotels = $hotel->getAllHotels();
         echo $homePage;
     }
