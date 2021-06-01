@@ -15,8 +15,9 @@ class homePageController extends Controller
         $hotel = new Hotel;
         // echo $data. '<br>';
         $responses = $hotel->getSearchResult($data);
+        
         foreach ($responses as $response) {
-            echo '<div id="search_result">' . $response->name . '</div>';
+            echo var_dump($response);
         }
     }
 }
