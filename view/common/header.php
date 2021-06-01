@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../view/css/main.css">
     <script type="text/javascript" src="../view/js/search.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style/main.css">
     <title>header</title>
 </head>
 <body>

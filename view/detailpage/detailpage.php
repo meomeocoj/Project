@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../view/css/detailPage.css">
     <title>Detailpage</title>
 </head>
 
@@ -35,32 +35,32 @@
     <!-- Full-width images with number text -->
     <div class="mySlides">
         <div class="numbertext">1 / 6</div>
-        <img src="img1.png" style="width:100%" height="500px">
+        <img src="../view/image/img1.png" style="width:100%" height="500px">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">2 / 6</div>
-        <img src="img2.png" style="width:100%" height="500px">
+        <img src="../view/image/img2.png" style="width:100%" height="500px">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">3 / 6</div>
-        <img src="img3.png" style="width:100%" height="500px">
+        <img src="../view/image/img3.png" style="width:100%" height="500px">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">4 / 6</div>
-        <img src="img4.png" style="width:100%" height="500px">
+        <img src="../view/image/img4.png" style="width:100%" height="500px">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">5 / 6</div>
-        <img src="img5.png" style="width:100%" height="500px">
+        <img src="../view/image/img5.png" style="width:100%" height="500px">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">6 / 6</div>
-        <img src="img6.png" style="width:100%" height="500px">
+        <img src="../view/image/img6.png" style="width:100%" height="500px">
     </div>
 
     <!-- Next and previous buttons -->
@@ -75,22 +75,22 @@
     <!-- Thumbnail images -->
     <div class="row">
         <div class="column">
-            <img class="demo cursor" src="img1.png" style="width:100%" height="128px" onclick="currentSlide(1)" alt="1 / 6">
+            <img class="demo cursor" src="../view/image/img1.png" style="width:100%" height="128px" onclick="currentSlide(1)" alt="1 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="img2.png" style="width:100%" height="128px" onclick="currentSlide(2)" alt="2 / 6">
+            <img class="demo cursor" src="../view/image/img2.png" style="width:100%" height="128px" onclick="currentSlide(2)" alt="2 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="img3.png" style="width:100%" height="128px" onclick="currentSlide(3)" alt="3 / 6">
+            <img class="demo cursor" src="../view/image/img3.png" style="width:100%" height="128px" onclick="currentSlide(3)" alt="3 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="img4.png" style="width:100%" height="128px" onclick="currentSlide(4)" alt="4 / 6">
+            <img class="demo cursor" src="../view/image/img4.png" style="width:100%" height="128px" onclick="currentSlide(4)" alt="4 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="img5.png" style="width:100%" height="128px" onclick="currentSlide(5)" alt="5 / 6">
+            <img class="demo cursor" src="../view/image/img5.png" style="width:100%" height="128px" onclick="currentSlide(5)" alt="5 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="img6.png" style="width:100%" height="128px" onclick="currentSlide(6)" alt="6 / 6">
+            <img class="demo cursor" src="../view/image/img6.png" style="width:100%" height="128px" onclick="currentSlide(6)" alt="6 / 6">
         </div>
     </div>
 </div>

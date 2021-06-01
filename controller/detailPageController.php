@@ -8,7 +8,7 @@ class detailPageController extends Controller
         $detailPage = $this->render("detailPage");
 
         $detailPage->hotels = $hotel->getDetailHotel();
-        echo getcwd();
+        
         echo $detailPage;
     }
 }
