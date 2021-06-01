@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <script type="text/javascript" src="../js/script.js"></script>
     <title>Homepage</title>
 </head>
@@ -20,7 +20,7 @@
         <div class="mySlides fade">
             <a href="#">
                 <div class="numbertext">1 / 3</div>
-                <img src="HaNoi2.jpg" style="width:100%; height:400px">
+                <img src="../img/HaNoi2.jpg" style="width:100%; height:400px">
                 <div class="text">Hà Nội</div>
             </a> 
         </div>
@@ -28,7 +28,7 @@
         <div class="mySlides fade">
             <a href="#">
                 <div class="numbertext">2 / 3</div>
-                <img src="HCMjpg.jpg" style="width:100%; height:400px;">
+                <img src="../img/HCMjpg.jpg" style="width:100%; height:400px;">
                 <div class="text">Thành phố Hồ Chí Minh</div>
             </a> 
         </div>
@@ -36,7 +36,7 @@
         <div class="mySlides fade">
             <a href="#">
                 <div class="numbertext">3 / 3</div>
-                <img src="location_10_1559303118.png" style="width:100%; height:400px">
+                <img src="../img/location_10_1559303118.png" style="width:100%; height:400px">
                 <div class="text">Vũng Tàu</div>
             </a> 
         </div>
