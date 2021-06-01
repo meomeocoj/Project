@@ -1,17 +1,19 @@
 function showResult(str) {
     if (str.length == 0) {
         document.getElementById("search").innerHTML = "";
-        document.getElementById("search").style.border = "0px";
+        document.getElementById("search").style.border = "1px";
         return;
     }
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("search").innerHTML = this.responseText;
-            document.getElementById("search").style.border = "1px solid #A5ACB2";
+            console.log(this.responseText);
+            document.getElementById("dcm").innerHTML = this.responseText;
+            document.getElementById("dcm").style.border = "3px solid #A5ACB2";
         }
     };
-    xmlhttp.open("GET", "search/" + str, true);
-    xmlhttp.send();
+    xhttp.open("GET", "search/" + str, true);
+    xhttp.send();
+    console.log(xhttp);
     // 127.0 .0 .1 / Project /
 }

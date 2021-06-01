@@ -13,12 +13,10 @@ class homePageController extends Controller
     {
         require_once 'model/Hotel.php';
         $hotel = new Hotel;
-        echo $data. '<br>';
-        echo $data[0]. '<br>';
+        // echo $data. '<br>';
         $responses = $hotel->getSearchResult($data);
-        
         foreach ($responses as $response) {
-            echo $response->name;
+            echo '<div id="search_result">' . $response->name . '</div>';
         }
     }
 }
