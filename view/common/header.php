@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <link rel="stylesheet" type="text/css" href="../view/css/main.css">
-    <script type="text/javascript" src="../view/js/search.js"></script>
-    <link rel="stylesheet" type="text/css" href="../style/main.css">
-=======
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
->>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
-    <title>header</title>
-</head>
-<body>
+<!-- header -->
 <div id = "dcm"></div>
     <div class="header">
         <nav class="nav-bar">
@@ -39,3 +24,4 @@
     </div>
 </body>
 </html>
+<!-- end header -->
