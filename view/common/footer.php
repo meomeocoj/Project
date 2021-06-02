@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +56,11 @@
       </div>
       <!--footer-->
       <footer class="footer-distributed">
+=======
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
 <footer class="footer-distributed">
         <div class="footer-left">
-
             <h3>Lux<span>Stay</span></h3>
-
             <p class="footer-links">
                 <a href="#">Home</a>
                 ·

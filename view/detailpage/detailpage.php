@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../view/css/detailPage.css">
+=======
+    <link rel="stylesheet" href="../css/main.css">
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
     <title>Detailpage</title>
 </head>
 
 <body>
+<<<<<<< HEAD
 <header>
     <div class="header">
         <nav class="nav-bar">
@@ -27,6 +32,9 @@
         </nav>
     </div>
 </header>
+=======
+<?php include'../common/header.php' ?>
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
 
 <!--slide show-->
 <!-- Container for the image gallery -->
@@ -35,32 +43,56 @@
     <!-- Full-width images with number text -->
     <div class="mySlides">
         <div class="numbertext">1 / 6</div>
+<<<<<<< HEAD
         <img src="../view/image/img1.png" style="width:100%" height="500px">
+=======
+        <img src="img1.png" style="width:100%" height="500px">
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
     </div>
 
     <div class="mySlides">
         <div class="numbertext">2 / 6</div>
+<<<<<<< HEAD
         <img src="../view/image/img2.png" style="width:100%" height="500px">
+=======
+        <img src="img2.png" style="width:100%" height="500px">
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
     </div>
 
     <div class="mySlides">
         <div class="numbertext">3 / 6</div>
+<<<<<<< HEAD
         <img src="../view/image/img3.png" style="width:100%" height="500px">
+=======
+        <img src="img3.png" style="width:100%" height="500px">
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
     </div>
 
     <div class="mySlides">
         <div class="numbertext">4 / 6</div>
+<<<<<<< HEAD
         <img src="../view/image/img4.png" style="width:100%" height="500px">
+=======
+        <img src="img4.png" style="width:100%" height="500px">
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
     </div>
 
     <div class="mySlides">
         <div class="numbertext">5 / 6</div>
+<<<<<<< HEAD
         <img src="../view/image/img5.png" style="width:100%" height="500px">
+=======
+        <img src="img5.png" style="width:100%" height="500px">
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
     </div>
 
     <div class="mySlides">
         <div class="numbertext">6 / 6</div>
+<<<<<<< HEAD
         <img src="../view/image/img6.png" style="width:100%" height="500px">
+=======
+        <img src="img6.png" style="width:100%" height="500px">
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
     </div>
 
     <!-- Next and previous buttons -->
@@ -75,6 +107,7 @@
     <!-- Thumbnail images -->
     <div class="row">
         <div class="column">
+<<<<<<< HEAD
             <img class="demo cursor" src="../view/image/img1.png" style="width:100%" height="128px" onclick="currentSlide(1)" alt="1 / 6">
         </div>
         <div class="column">
@@ -91,6 +124,24 @@
         </div>
         <div class="column">
             <img class="demo cursor" src="../view/image/img6.png" style="width:100%" height="128px" onclick="currentSlide(6)" alt="6 / 6">
+=======
+            <img class="demo cursor" src="img1.png" style="width:100%" height="128px" onclick="currentSlide(1)" alt="1 / 6">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img2.png" style="width:100%" height="128px" onclick="currentSlide(2)" alt="2 / 6">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img3.png" style="width:100%" height="128px" onclick="currentSlide(3)" alt="3 / 6">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img4.png" style="width:100%" height="128px" onclick="currentSlide(4)" alt="4 / 6">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img5.png" style="width:100%" height="128px" onclick="currentSlide(5)" alt="5 / 6">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="img6.png" style="width:100%" height="128px" onclick="currentSlide(6)" alt="6 / 6">
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
         </div>
     </div>
 </div>
@@ -180,6 +231,7 @@
 </script>
 
 <!--footer-->
+<<<<<<< HEAD
 <footer class="footer-distributed">
     <div class="footer-left">
 
@@ -261,6 +313,9 @@
 
     </div>
 </footer>
+=======
+<?php include '../common/footer.php'?>
+>>>>>>> e405961b71b29c39379f6c2a57d767ed0cad87b0
 </body>
 
 </html>
