@@ -7,20 +7,22 @@ class signupPageController extends Controller
         $user = new User;
         $signupPage = $this->render("signupPage");
         echo $signupPage;
-
-        if (isset($_POST['signup']) == true) {
+    }
+    public function signUp()
+    {
+        require 'model/user.php';
+        $user = new User;
+        if (isset($_POST['btn-login'])) {
             $data = array();
             $data['fullname'] = $_POST['fullname'];
             $data['email'] = $_POST['email'];
-            $data['username'] = $_POST['username'];
-            $data['password'] = $_POST['password'];
+            $data['password'] = $_POST['pass1'];
 
             if ($user->insert($data)) {
-                redirect('index.php', 'Your account has been created', 'success');
+                redirect('../home', 'Your account has been created', 'success');
             } else {
-                redirect('index.php', 'Something went wrong', 'error');
+                redirect('../home', 'Something went wrong', 'error');
             }
         }
-        
     }
 }

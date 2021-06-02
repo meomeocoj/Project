@@ -19,7 +19,9 @@
     <!-- Full-width images with number text -->
     <div class="mySlides">
         <div class="numbertext">1 / 6</div>
-        <img src="../view/image/img1.png" style="width:100%" height="500px">
+        <a href="localhost">
+        <img src="../view/image/img1.png" href="localhost" style="width:100%" height="500px">
+        </a>
     </div>
 
     <div class="mySlides">

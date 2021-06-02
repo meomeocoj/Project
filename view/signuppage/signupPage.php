@@ -5,22 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD:view/signuppage/signupPage.php
-    <link rel="stylesheet" href="view/css/login.css">
-    <script type="text/javascript" src="view/js/script.js"></script>
-=======
-    <link rel="stylesheet" href="../style/login.css">
-    <script type="text/javascript" src="../js/script.js"></script>
->>>>>>> 1dd318925be6e9157c77f5c8ce1bfd54c0a93f23:view/signuppage/register.php
+    <link rel="stylesheet" href="../view/css/login.css">
+    <link rel="stylesheet" href="../view/css/main.css">
+    <script type="text/javascript" src="../view/js/script.js"></script>
     <title>Login</title>
 </head>
 
-<body>
-    <?php include '../common/header.php' ?>
+<body> 
     <!--Content-->
 
     <div class="form-group-container">
-        <form action="" method="post" class="register-form">
+        <form action="../signup/signup" method="POST" class="register-form">
             <div class="avatar">
                 <a href="view/homepage/homePage.php">
                     <svg version="1.1" viewBox="0 0 50 50" class="svg-icon svg-fill" style="width: 50px; height: 50px;">
@@ -30,12 +25,12 @@
             </div>
             <h2 style="text-align: center;">Login LuxStay</h2>
             <label class ="label-block" for="username">Full name</label>
-            <input class ="input-block" type="text" name="full name" required>
-            <label class ="label-block" for="username">Email address</label>
+            <input class ="input-block" type="text" name="fullname" required>
+            <label class ="label-block" for="email">Email address</label>
             <input class ="input-block" type="text" name="email" required>
-            <label class ="label-block" for="passWord">Password</label>
+            <label class ="label-block" for="password">Password</label>
             <input class ="input-block" type="text" name="pass1" required>
-            <label class ="label-block" for="passWord">Verified password</label>
+            <label class ="label-block" for="password">Verified password</label>
             <input class ="input-block" type="text" name="pass2" required>
             <div class="host">
             <label class ="label-block">Type of customer</label>
@@ -44,7 +39,8 @@
             <input type="radio" id="host" name="type" value="host">
             <label for="host" >host</label>
             </div>
-            <button type="submit" id="btn-login" onClick="signUp()"> Sign Up </button>
+            <button type="submit" id="btn-login" name="btn-login" onClick="signUp()"> Sign Up </button>
+
             <div id="forgot">
                 <a href="view/homepage/homePage.php" style="text-align: center; margin-top:5px;">Home</a>
             </div>
