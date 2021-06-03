@@ -17,7 +17,7 @@
     <!--slide show-->
     <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
+        <div class="mySlides fade"> 
             <a href="#">
                 <div class="numbertext">1 / 3</div>
                 <img src="../img/HaNoi2.jpg" style="width:100%; height:400px">
