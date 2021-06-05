@@ -28,9 +28,9 @@
             <label class ="label-block" for="username">Email address</label>
             <input class ="input-block" type="text" name="email" required>
             <label class ="label-block" for="passWord">Password</label>
-            <input class ="input-block" type="text" name="pass1" required>
+            <input class ="input-block" type="password" name="pass1" required>
             <label class ="label-block" for="passWord">Verified password</label>
-            <input class ="input-block" type="text" name="pass2" required>
+            <input class ="input-block" type="password" name="pass2" required>
             <div class="host">
             <label class ="label-block">Type of customer</label>
             <input type="radio" id="guest" name="type" value="guest" checked="checked">
