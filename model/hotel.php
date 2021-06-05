@@ -20,7 +20,8 @@ class Hotel
     }
     public function getSearchResult($data)
     {
-        $this->db->query("SELECT DISTINCT name, address FROM hotel WHERE name LIKE '%$data%' ORDER BY id LIMIT 0,5");
+        $this->db->query("SELECT DISTINCT name, address FROM hotel WHERE name LIKE CONCAT('%', :data, '%') ORDER BY id LIMIT 0,5");
+        $this->db->bind(':data', $data);
         $results = $this->db->resultSet();
         return $results;
     }

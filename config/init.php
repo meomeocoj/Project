@@ -1,7 +1,7 @@
 <?php
 // This config will be initialized through the whole user's session
 // DB params
-define("DB_HOST", "localhost");
+define("DB_HOST", "localhost:3306");
 define("DB_USER", "root");
 define("DB_PASS", "");
 define("DB_NAME", "hotel");

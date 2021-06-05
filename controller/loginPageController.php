@@ -20,6 +20,7 @@ class loginPageController extends Controller
                 redirect('../home', 'Your account has been created', 'success');
             } else {
                 redirect('../home', 'Something went wrong', 'error');
+
             }
         }
     }
