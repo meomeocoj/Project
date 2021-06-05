@@ -29,10 +29,11 @@ class Template
         //dirname return path of the parent's directory
         //chdir: specify a new directory
         chdir('view/' . $exploded_dir[0]);
-        ob_start();
         
+        ob_start();
+        //Project/view/homepage/
         include $exploded_dir[1];
-        //$path = "templates/frontpage.php"; --> frontpage.php
+        //$path = "templates/frontpage.php"; --> frontpage.php 
         return ob_get_clean();
     }
 }

@@ -2,7 +2,6 @@
 
 class Dispatcher
 {
-
     private $request;
 
     public function dispatch()
@@ -24,5 +23,4 @@ class Dispatcher
         $controller = new $name();
         return $controller;
     }
-
 }

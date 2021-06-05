@@ -6,6 +6,7 @@ class homePageController extends Controller
         require 'model/hotel.php';
         $hotel = new Hotel;
         $homePage = $this->render("homePage");
+      
         $homePage->hotels = $hotel->getAllHotels();
         echo $homePage;
     }
@@ -15,8 +16,9 @@ class homePageController extends Controller
         $hotel = new Hotel;
         // echo $data. '<br>';
         $responses = $hotel->getSearchResult($data);
+        
         foreach ($responses as $response) {
-            echo '<div id="search_result">' . $response->name . '</div>';
+            echo var_dump($response);
         }
     }
 }
