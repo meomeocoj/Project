@@ -13,10 +13,17 @@ a {
 a:hover {
     color: orange;
 }
+<<<<<<< HEAD
 
 .header {
     width: 100%;
     display: flex;
+=======
+.header{
+    position: fixed;
+    top:0;
+    width:100%;
+>>>>>>> front-end-Minh
     height: 80px;
     align-items: center;
     border-bottom: 1px solid #f2f2f2;
