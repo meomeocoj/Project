@@ -13,10 +13,15 @@ a {
 a:hover {
     color: orange;
 }
+<<<<<<< HEAD
 
 .header {
     width: 100%;
     display: flex;
+=======
+.header{
+    width:100%;
+>>>>>>> ad11243bc15c7e4b18ff8944c2fdd2093f09d2e1
     height: 80px;
     align-items: center;
     border-bottom: 1px solid #f2f2f2;

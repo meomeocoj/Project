@@ -28,10 +28,17 @@
             <input class ="input-block" type="text" name="fullname" required>
             <label class ="label-block" for="email">Email address</label>
             <input class ="input-block" type="text" name="email" required>
+<<<<<<< HEAD:view/signuppage/signupPage.php
             <label class ="label-block" for="password">Password</label>
             <input class ="input-block" type="text" name="pass1" required>
             <label class ="label-block" for="password">Verified password</label>
             <input class ="input-block" type="text" name="pass2" required>
+=======
+            <label class ="label-block" for="passWord">Password</label>
+            <input class ="input-block" type="password" name="pass1" required>
+            <label class ="label-block" for="passWord">Verified password</label>
+            <input class ="input-block" type="password" name="pass2" required>
+>>>>>>> ad11243bc15c7e4b18ff8944c2fdd2093f09d2e1:view/signuppage/register.php
             <div class="host">
             <label class ="label-block">Type of customer</label>
             <input type="radio" id="guest" name="type" value="guest" checked="checked">
