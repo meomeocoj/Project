@@ -27,12 +27,7 @@ class User
         $this->db->bind('email', $user['email']);
         $this->db->bind(':password', $user['password']);
         $result = $this->db->result();
-    
-        if ($result) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return $result;
     }
+    
 }

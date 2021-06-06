@@ -5,10 +5,11 @@ class detailPageController extends Controller
     {
         require 'model/hotel.php';
         $hotel = new Hotel;
-        $detailPage = $this->render("detailPage");
+        $detailPage = $this->render("detailpage/detailpage");
 
         $detailPage->hotels = $hotel->getDetailHotel();
-        
+        //$results = $detailPage->hotels
+//foreach ($hotels as hotel) echo $hotel-name;
         echo $detailPage;
     }
 }

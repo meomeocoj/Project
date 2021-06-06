@@ -10,12 +10,10 @@
     <script type="text/javascript" src="view/js/search.js"></script>
     <title>Homepage</title>
 </head>
-<!-- $_SERVER['DOCUMENT_ROOT'] . '/Project/view/ -->
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
 ?>
 <body>
-<div id="dcm"></div>
     <div class="hot-location">
         <h2>Địa điểm nổi bật</h2>
         <p>Cùng luxstay bắt đầu cuộc hành trình chinh phục thế giới</p>

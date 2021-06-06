@@ -5,10 +5,15 @@ class homePageController extends Controller
     {
         require 'model/hotel.php';
         $hotel = new Hotel;
-        $homePage = $this->render("homePage");
-      
+        $homePage = $this->render("homepage/homePage");
         $homePage->hotels = $hotel->getAllHotels();
-        echo $homePage;
+        if (!isset($_SESSION['login'])) {
+            $_SESSION['login'] = false;
+            $_SESSION['username'] = NULL;
+            $_SESSION['login'] = NUll;
+            $_SESSION['role'] = NULL;
+        }
+        echo $homePage;   
     }
     public function search($data)
     {
@@ -16,9 +21,13 @@ class homePageController extends Controller
         $hotel = new Hotel;
         // echo $data. '<br>';
         $responses = $hotel->getSearchResult($data);
-        
+
         foreach ($responses as $response) {
             echo var_dump($response);
         }
+    }
+    public function logout(){
+        session_destroy();
+        redirect('../home', '', '');
     }
 }
