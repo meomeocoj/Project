@@ -16,9 +16,8 @@ class signupPageController extends Controller
             $data = array();
             $data['fullname'] = $_POST['fullname'];
             $data['email'] = $_POST['email'];
-            $data['password'] = $_POST['pass1'];
-            $data['role'] = $_POST['type'];
-
+            $pwd = $_POST['pass1'];
+            $data['password'] = password_hash($pwd, PASSWORD_BCRYPT);
             if ($user->insert($data)) {
                 redirect('../login/show', 'Your account has been created, log in to continue', 'success');
             } else {
