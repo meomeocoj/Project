@@ -25,7 +25,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
     <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade"> 
-            <a href="#">
+            <a href="pagination/show/?id=11&page=1">
                 <div class="numbertext">1 / 3</div>
                 <img src="view/image/HaNoi2.jpg" style="width:100%; height:400px">
                 <div class="text">Hà Nội</div>
@@ -33,7 +33,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
         </div>
 
         <div class="mySlides fade">
-            <a href="#">
+            <a href="pagination/show/?id=33&page=1">
                 <div class="numbertext">2 / 3</div>
                 <img src="view/image/HCMjpg.jpg" style="width:100%; height:400px;">
                 <div class="text">Thành phố Hồ Chí Minh</div>
@@ -41,7 +41,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
         </div>
 
         <div class="mySlides fade">
-            <a href="#">
+            <a href="pagination/show/?id=15&page=1">
                 <div class="numbertext">3 / 3</div>
                 <img src="view/image/location_10_1559303118.png" style="width:100%; height:400px">
                 <div class="text">Vũng Tàu</div>

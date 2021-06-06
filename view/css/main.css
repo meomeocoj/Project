@@ -13,15 +13,10 @@ a {
 a:hover {
     color: orange;
 }
-<<<<<<< HEAD
 
 .header {
     width: 100%;
     display: flex;
-=======
-.header{
-    width:100%;
->>>>>>> ad11243bc15c7e4b18ff8944c2fdd2093f09d2e1
     height: 80px;
     align-items: center;
     border-bottom: 1px solid #f2f2f2;
@@ -52,7 +47,7 @@ a:hover {
     margin-left: 10px;
     align-items: center;
     width: 90%;
-    box-shadow: 1px 1px 4px rgb(0 0 0 / 20%);
+    box-shadow: 1px 1px 4px rgb(0 0 0 );
     border-radius: 5px
 }
 
@@ -331,7 +326,7 @@ a:hover {
 .footer-distributed .footer-center p a {
     color: #5383d3;
     text-decoration: none;
-    ;
+;
 }
 
 .footer-distributed .footer-right {

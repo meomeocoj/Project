@@ -1,7 +1,7 @@
 <?php
 class detailPageController extends Controller
 {
-    public function show()
+    public function show($id)
     {
         require 'model/hotel.php';
         $hotel = new Hotel;

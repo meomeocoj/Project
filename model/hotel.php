@@ -25,4 +25,12 @@ class Hotel
         $results = $this->db->resultSet();
         return $results;
     }
+
+    public function getHotelById($id, $page) {
+        $this->db->query("SELECT DISTINCT url.hotel_id, hotel.name, url.min_price FROM `hotel`, `url` WHERE hotel.province_id = :id AND url.hotel_id = hotel.id LIMIT :offset, 11");
+        $this->db->bind(':id', $id);
+        $this->db->bind(':offset', ($page-1)*11);
+        $results = $this->db->resultSet();
+        return $results;
+    }
 }
