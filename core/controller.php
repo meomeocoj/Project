@@ -5,7 +5,7 @@ class Controller
     public function render($filename)
     {
         //detailpage/detailPage.php
-        $template = new Template(strtolower($filename) . '/' . $filename . '.php');
+        $template = new Template($filename . '.php');
         return $template;
     }
     private function secure_input($data)

@@ -5,7 +5,7 @@ class signupPageController extends Controller
     {
         require 'model/user.php';
         $user = new User;
-        $signupPage = $this->render("signupPage");
+        $signupPage = $this->render("signuppage/signupPage");
         echo $signupPage;
     }
     public function signUp()
@@ -19,7 +19,7 @@ class signupPageController extends Controller
             $pwd = $_POST['pass1'];
             $data['password'] = password_hash($pwd, PASSWORD_BCRYPT);
             if ($user->insert($data)) {
-                redirect('../home', 'Your account has been created', 'success');
+                redirect('../login/show', 'Your account has been created, log in to continue', 'success');
             } else {
                 redirect('../home', 'Something went wrong', 'error');
             }
