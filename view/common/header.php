@@ -30,14 +30,14 @@
                 </div>
             <?php elseif ($_SESSION['login'] == true && $_SESSION['role'] == "guest") : ?>
                 <div id="register">
-                    <a href="signup/show"><?php echo $_SESSION['username'] ?></a>
+                    <a href="http://localhost/Project/signup/show"><?php echo $_SESSION['username'] ?></a>
                 </div>
             <?php else : ?>
                 <div id="register">
-                    <a href="signup/show">Đăng kí</a>
+                    <a href="http://localhost/Project/signup/show">Đăng kí</a>
                 </div>
                 <div id="login">
-                    <a href="login/show">Đăng nhập</a>
+                    <a href="http://localhost/Project/login/show">Đăng nhập</a>
                 </div>
             <?php endif; ?>
         </div>
