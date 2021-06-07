@@ -19,6 +19,7 @@ class loginPageController extends Controller
             $data = array();
             $data['email'] = $_POST['email'];
             $data['password'] = $_POST['pass1'];
+            
             $result = $user->verify($data);
             if ($result) {
                 $_SESSION['username'] = $result->fullname;

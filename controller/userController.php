@@ -5,8 +5,8 @@ class crudController extends Controller
     {
         require 'model/user.php';
         $user = new User;
-        $signupPage = $this->render("signuppage/signupPage");
-        echo $signupPage;
+        $editPage = $this->render("signuppage/signupPage");
+        echo $editPage;
     }
     public function showHostCrud()
     {
@@ -16,6 +16,8 @@ class crudController extends Controller
         echo $signupPage;
     }
     public function updateUser(){
-        
+        require 'model/user.php';
+        require 'model/user.php';
+        $user = new User;
     }
 }
