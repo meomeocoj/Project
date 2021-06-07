@@ -27,12 +27,9 @@ class User
         $this->db->bind(':email', $user['email']);
 //        $this->db->bind(':password', $user['password']);
         $result = $this->db->result();
-
-        if (password_verify($user['password'], $result -> password)) {
-            return true;
-        } else {
-            return false;
-        }
+        password_verify($user['password'], $result -> password);
+        return $result;
+       
 
     }
     

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="view/css/main.css">
-    <script type="text/javascript" src="view/js/script.js"></script>
+    <script type="text/javascript" src="http://localhost/Project/view/js/script.js"></script>
     <script type="text/javascript" src="view/js/search.js"></script>
     <title>Homepage</title>
 </head>
@@ -24,7 +24,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
         <div class="mySlides fade"> 
             <a href="pagination/show/?id=11&page=1">
                 <div class="numbertext">1 / 3</div>
-                <img src="view/image/HaNoi2.jpg" style="width:100%; height:400px">
+                <img src="http://localhost/Project/view/image/HaNoi2.jpg" style="width:100%; height:400px">
                 <div class="text">Hà Nội</div>
             </a>
         </div>
