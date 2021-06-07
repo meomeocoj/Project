@@ -26,10 +26,10 @@
     <div class="boxes">
         <?php
             foreach($attribute as $att) {
-                if($att->min_price == -1) {
-                    $att->min_price = rand(500000,1500000).'.0';
+                if($att->price == -1) {
+                    $att->price = rand(500000,1500000).'.0';
                 }
-                echo '<div id="box"><a href="#"><img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px"></a><a href="">' . $att->name . '</a><p>'.$att->min_price.'</p></div>';
+                echo '<div id="box"><a href="#"><img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px"></a><a href="">' . $att->name . '</a><p>'.$att->price.'</p></div>';
             }
             ?>
 <!--    <div id="box">-->
