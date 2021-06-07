@@ -7,15 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../view/css/paging.css">
     <link rel="stylesheet" href="../../view/css/main.css">
-<<<<<<< HEAD
-<<<<<<< HEAD
     <title><?php echo $location->name; ?></title>
-=======
     <title><?php echo '$location' ?></title>
->>>>>>> f52e8b0aba7810e0e9b860792a9455129482bbc1
-=======
     <title><?php echo $location->name; ?></title>
->>>>>>> d4e4a30dbdafdd5c630d95b26d4736ab31587fec
 </head>
 
 <body>
@@ -33,8 +27,6 @@
                 </select>
             </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>
     <div class="boxes">
         <?php
@@ -130,9 +122,6 @@
 <!--        <a href="#">5</a>-->
 <!--        <a href="#">6</a>-->
 <!--        <a href="#">&raquo;</a>-->
-=======
-=======
->>>>>>> d4e4a30dbdafdd5c630d95b26d4736ab31587fec
         <div class="boxes">
             <?php
             foreach ($attribute as $att) {
@@ -241,10 +230,6 @@
             <!--        <a href="#">6</a>-->
             <!--        <a href="#">&raquo;</a>-->
         </div>
-<<<<<<< HEAD
->>>>>>> f52e8b0aba7810e0e9b860792a9455129482bbc1
-=======
-=======
     </div>
     <div class="boxes">
         <?php
@@ -345,8 +330,6 @@
 <!--        <a href="#">5</a>-->
 <!--        <a href="#">6</a>-->
 <!--        <a href="#">&raquo;</a>-->
->>>>>>> 6caad0c5eabec677df2053bf5317078e7b3822ac
->>>>>>> d4e4a30dbdafdd5c630d95b26d4736ab31587fec
     </div>
     <?php include '../common/footer.php' ?>
 </body>
