@@ -15,7 +15,7 @@
     <!--Content-->
 
     <div class="form-group-container">
-        <form action="../signup/signup" method="POST" class="register-form">
+        <form action="http://localhost/Project/signup/signup" method="POST" class="register-form">
             <div class="avatar">
                 <a href="view/homepage/homePage.php">
                     <svg version="1.1" viewBox="0 0 50 50" class="svg-icon svg-fill" style="width: 50px; height: 50px;">
@@ -28,17 +28,10 @@
             <input class ="input-block" type="text" name="fullname" required>
             <label class ="label-block" for="email">Email address</label>
             <input class ="input-block" type="text" name="email" required>
-<<<<<<< HEAD:view/signuppage/signupPage.php
             <label class ="label-block" for="password">Password</label>
             <input class ="input-block" type="text" name="pass1" required>
             <label class ="label-block" for="password">Verified password</label>
             <input class ="input-block" type="text" name="pass2" required>
-=======
-            <label class ="label-block" for="passWord">Password</label>
-            <input class ="input-block" type="password" name="pass1" required>
-            <label class ="label-block" for="passWord">Verified password</label>
-            <input class ="input-block" type="password" name="pass2" required>
->>>>>>> ad11243bc15c7e4b18ff8944c2fdd2093f09d2e1:view/signuppage/register.php
             <div class="host">
             <label class ="label-block">Type of customer</label>
             <input type="radio" id="guest" name="type" value="guest" checked="checked">

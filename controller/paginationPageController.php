@@ -6,7 +6,7 @@ class paginationPageController extends Controller
     public function show($data) {
         require 'model/hotel.php';
         $hotel = new Hotel;
-        $pagination = $this->render("pagination");
+        $pagination = $this->render("pagination/pagination");
         $param = explode('&', $data);
         $param = array_slice($param, 0);
         $id = substr($param[0],4);
