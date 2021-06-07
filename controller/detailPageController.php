@@ -6,10 +6,8 @@ class detailPageController extends Controller
         require 'model/hotel.php';
         $hotel = new Hotel;
         $detailPage = $this->render("detailpage/detailpage");
-
-        $detailPage->hotels = $hotel->getDetailHotel();
-        //$results = $detailPage->hotels
-//foreach ($hotels as hotel) echo $hotel-name;
+        $id = substr($param,4);
+        $detailPage->attribute = $hotel->getHotelInfoById($id);
         echo $detailPage;
     }
 }

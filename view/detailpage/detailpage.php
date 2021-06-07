@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../view/css/detailPage.css">
-    <title>Detailpage</title>
+    <title><?php echo $attribute->name; ?></title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <div class="mySlides">
         <div class="numbertext">1 / 6</div>
         <a href="localhost">
-        <img src="../../view/image/img1.png" href="localhost" style="width:100%" height="500px">
+            <img src="../../view/image/img1.png" href="localhost" style="width:100%" height="500px">
         </a>
     </div>
 
@@ -41,7 +41,11 @@
 
     <div class="mySlides">
         <div class="numbertext">5 / 6</div>
+        <img src="../../view/image/img5.png" style="width:100%" height="500px">
     </div>
+
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
         <img src="../../view/image/img6.png" style="width:100%" height="500px">
     </div>
 
@@ -79,17 +83,21 @@
 
 <!--sidenav-->
 <div class="sidenav">
-    <p>Price: <b>$PRICE</b> per night.</p>
-        <button type="button">BOOK NOW</button>
+    <p>Price: <b><?php
+            if($attribute->price == -1) {
+                $attribute->price = rand(500000,1500000);
+            }
+            echo ceil($attribute->price/1000)*1000; ?></b> per night.</p>
+    <button type="button">BOOK NOW</button>
 </div>
 
 <div class="overview">
-    <h2>NAME OF HOTEL GOES HERE</h2>
-    <p>Optional address</p>
+    <h2><?php echo $attribute->name; ?></h2>
+    <p><?php echo $attribute->address; ?></p>
 
     <button class="accordion">OVERVIEW</button>
     <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p><?php echo '<b>'.$attribute->name.'</b> is perfectly located for both business and leisure guests in '.$attribute->province.'. The property features a wide range of facilities to make your stay a pleasant experience. Service-minded staff will welcome and guide you at '.$attribute->name.'. Each guestroom is elegantly furnished and equipped with handy amenities. The property offers various recreational opportunities. '.$attribute->name.' is an excellent choice from which to explore '.$attribute->province.' or to simply relax and rejuvenate.'; ?></p>
     </div>
 
     <button class="accordion">AMENITIES (TIỆN NGHI)</button>
@@ -99,9 +107,7 @@
 
     <button class="accordion">PRICE</button>
     <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
+        <p>Price: <b><?php echo ceil($attribute->price/1000)*1000; ?></b> per night.</p>    </div>
     <button class="accordion">AVAILABILITY</button>
     <div class="panel">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
