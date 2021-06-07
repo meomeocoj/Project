@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="../../view/css/paging.css">
     <link rel="stylesheet" href="../../view/css/main.css">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <title><?php echo $location->name; ?></title>
 =======
     <title><?php echo '$location' ?></title>
 >>>>>>> f52e8b0aba7810e0e9b860792a9455129482bbc1
+=======
+    <title><?php echo $location->name; ?></title>
+>>>>>>> d4e4a30dbdafdd5c630d95b26d4736ab31587fec
 </head>
 
 <body>
@@ -30,15 +34,11 @@
             </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
     <div class="boxes">
         <?php
-            foreach($attribute as $att) {
-                if($att->price == -1) {
-                    $att->price = rand(500000,1500000).'.0';
-                }
-                echo '<div id="box"><a href="http://localhost/Project/detail/show/?id='.$att->hotel_id.'"><img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px"></a><a href="http://localhost/Project/detail/show/?id='.$att->hotel_id.'">' . $att->name . '</a><p>'.$att->price.'</p></div>';
-            }
+            echo $contentPage;
             ?>
 <!--    <div id="box">-->
 <!--        <a href="#">-->
@@ -131,6 +131,8 @@
 <!--        <a href="#">6</a>-->
 <!--        <a href="#">&raquo;</a>-->
 =======
+=======
+>>>>>>> d4e4a30dbdafdd5c630d95b26d4736ab31587fec
         <div class="boxes">
             <?php
             foreach ($attribute as $att) {
@@ -239,7 +241,112 @@
             <!--        <a href="#">6</a>-->
             <!--        <a href="#">&raquo;</a>-->
         </div>
+<<<<<<< HEAD
 >>>>>>> f52e8b0aba7810e0e9b860792a9455129482bbc1
+=======
+=======
+    </div>
+    <div class="boxes">
+        <?php
+            foreach($attribute as $att) {
+                if($att->price == -1) {
+                    $att->price = rand(500000,1500000).'.0';
+                }
+                echo '<div id="box"><a href="http://localhost/Project/detail/show/?id='.$att->hotel_id.'"><img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px"></a><a href="http://localhost/Project/detail/show/?id='.$att->hotel_id.'">' . $att->name . '</a><p>'.$att->price.'</p></div>';
+            }
+            ?>
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">--><?php //echo $name; ?><!--</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">--><?php //echo $name; ?><!--</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">$name</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">$name</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">$name</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="#">$name</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">$name</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">$name</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">$name</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">$name</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+<!--    <div id="box">-->
+<!--        <a href="#">-->
+<!--        <img class ="image" src="../../view/image/hotel.jpg" alt="house" style="width:300px; height:200px">-->
+<!--        </a>-->
+<!--        <a href="">$name</a>-->
+<!--        <p>$price/day</p>-->
+<!--    </div>-->
+    </div>
+    <div class="pagination">
+        <?php
+        echo $contentPage;
+        ?>
+<!--        <a href="#">&laquo;</a>-->
+<!--        <a class="active" href="#">1</a>-->
+<!--        <a href="#">2</a>-->
+<!--        <a href="#">3</a>-->
+<!--        <a href="#">4</a>-->
+<!--        <a href="#">5</a>-->
+<!--        <a href="#">6</a>-->
+<!--        <a href="#">&raquo;</a>-->
+>>>>>>> 6caad0c5eabec677df2053bf5317078e7b3822ac
+>>>>>>> d4e4a30dbdafdd5c630d95b26d4736ab31587fec
     </div>
     <?php include '../common/footer.php' ?>
 </body>
