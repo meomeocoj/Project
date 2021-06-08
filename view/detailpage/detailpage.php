@@ -95,21 +95,26 @@
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-body">
-                <span class="close"></span>
-                <label class="label-block" for="">Your check-in date: </label>
-                <input class="input-block" type="date" id="checkinDate" name="checkin-date" max="2025-12-31" onchange="updateTotalPrice()"> </br>
-                <label class="label-block" for="">Your check-out date: </label>
-                <input class="input-block" type="date" id="checkoutDate" name="checkout-date" max="2025-12-31" onchange="updateTotalPrice()"> </br>
-                <label class="label-block" for="">Number of room to book: </label>
-                <input class="input-block" type="number" id="numberOfRoom" name="num-room" value="1" onchange="updateTotalPrice()"> </br>
-                <label class="label-block" for="">Total price: </label>
-                <input class="input-block" type="text" id="totalPrice" name="tot-price"> </br>
-                <button id="myBtn2">CONFIRM</button>
+        <form action="http://localhost/Project/detail/book" method="POST" class="register-form">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span class="close">&times;</span>
+                    <label class="label-block" for="">Your email: </label>
+                    <input class="input-block" type="text" id="email" name="email"> </br>
+                    <label class="label-block" for="">Your check-in date: </label>
+                    <input class="input-block" type="date" id="checkinDate" name="checkin-date" max="2025-12-31" onchange="updateTotalPrice()"> </br>
+                    <label class="label-block" for="">Your check-out date: </label>
+                    <input class="input-block" type="date" id="checkoutDate" name="checkout-date" max="2025-12-31" onchange="updateTotalPrice()"> </br>
+                    <label class="label-block" for="">Number of room to book: </label>
+                    <input class="input-block" type="number" id="numberOfRoom" name="num-room" value="1" onchange="updateTotalPrice()"> </br>
+                    <label class="label-block" for="">Total price: </label>
+                    <input class="input-block" type="text" id="totalPrice" name="tot-price"> </br>
+                    <input class="input-block" type="hidden" id="hotel_id" name="hotel_id"> </br>
+                    <input class="input-block" type="hidden" id="bookingDate" name="bookingDate" value="CurrentTime">
+                    <button type="submit" id="btn-book" name="book" onClick="book()"> Sign Up </button>
+                </div>
             </div>
-        </div>
-
+        </form>
     </div>
 </div>
 
@@ -142,8 +147,16 @@
 </div>
 
 <script>
+    var d = new Date();
+
+    // Set the value of the "date" field
+    document.getElementById("bookingDate").value = d.toDateString();
+
     document.getElementById('checkinDate').valueAsDate = new Date();
     document.getElementById('checkoutDate').valueAsDate = new Date();
+    url = window.location.href;
+    id = url.match(/id=(.*)/)[1];
+    document.getElementById('hotel_id').value = id;
 
     function updateTotalPrice() {
         priceLine = document.getElementById('price').innerHTML;
@@ -162,18 +175,6 @@
             document.getElementById('totalPrice').value = totalPrice.toString();
         }
     }
-
-    /*date1 = document.getElementById('checkinDate').value
-    date2 = document.getElementById('checkoutDate').value
-    console.log(date1);
-    console.log(date2);
-    // To calculate the time difference of two dates
-    var Difference_In_Time = date2.getTime() - date1.getTime();
-
-    // To calculate the no. of days between two dates
-    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-
-    console.log(Difference_In_Days);*/
 
     // Get the modal
     var modal = document.getElementById("myModal");
