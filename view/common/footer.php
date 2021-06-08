@@ -22,7 +22,7 @@
 
             <div>
                 <i class="map-marker"></i>
-                <p><span style="color:#5383d3">Tầng 21 tòa nhà Capital Tower số 109 phố Trần Hưng Đạo, phường Cửa Nam, quận Hoàn Kiếm</span>Hà Nội, Việt Nam</p>
+                <p><span style="color:#5383d3">Tầng 21 tòa nhà Capital Tower số 109 phố Trần Hưng Đạo, phường Cửa Nam<br> Quận Hoàn Kiếm</span>Hà Nội, Việt Nam</p>
             </div>
 
             <div>

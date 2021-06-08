@@ -22,7 +22,7 @@ class loginPageController extends Controller
             
             $result = $user->verify($data);
             if ($result) {
-                $_SESSION['username'] = $result->fullname;
+                $_SESSION['username'] = $result->name;
                 $_SESSION['login'] = true;
                 $_SESSION['role'] = $result->role;
                 // echo $_SESSION['username'];

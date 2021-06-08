@@ -13,12 +13,12 @@
 
                 <!-- search suggestion add-on-->
                 <input type="text" value="Tìm kiếm" name="search" id="search" onfocus="if (this.value == 'Tìm kiếm') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Tìm kiếm';}">
-                    <div class="result" id = "results">
-                    </div>
+                <div class="result" id="results">
+                </div>
 
                 <script>
                     var results = document.getElementById("results");
-                    results.style.display='none';
+                    results.style.display = 'none';
                 </script>
                 <!-- end of search suggestion add-on-->
 
@@ -40,20 +40,20 @@
         <div class="nav-right">
             <?php if ($_SESSION['login'] == true && $_SESSION['role'] == "host") : ?>
                 <div id="register">
-                    <a href="user/edit"><?php echo $_SESSION['username'] ?></a>
+                    <a href="#"><?php echo $_SESSION['username'] ?></a>
                 </div>
                 <div id="login">
-                    <a href="user/host">Host</a>
+                    <a href="http://localhost/Project/host/show">Host</a>
                 </div>
                 <div id="logout">
-                    <a href="home/logout">Log out</a>
+                    <a href="http://localhost/Project/home/logout">Log out</a>
                 </div>
             <?php elseif ($_SESSION['login'] == true && $_SESSION['role'] == "guest") : ?>
                 <div id="register">
-                    <a href="http://localhost/Project/signup/show"><?php echo $_SESSION['username'] ?></a>
+                    <a href="#"><?php echo $_SESSION['username'] ?></a>
                 </div>
                 <div id="logout">
-                    <a href="home/logout">Log out</a>
+                    <a href="http://localhost/Project/home/logout">Log out</a>
                 </div>
             <?php else : ?>
                 <div id="register">
