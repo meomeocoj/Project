@@ -12,7 +12,9 @@
 </head>
 
 <body>
-    <?php include '../common/header.php'; ?>
+    <?php include '../common/header.php'; 
+      require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/message.php';
+    ?>
     <div class="container">
         <div class="filter">
             <!--        <div id="total">-->
