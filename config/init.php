@@ -4,7 +4,7 @@
 define("DB_HOST", "localhost:3306");
 define("DB_USER", "root");
 define("DB_PASS", "");
-define("DB_NAME", "hotel");
+define("DB_NAME", "hotel2");
 session_start();
 require_once 'helpers/system_helper.php';
 
