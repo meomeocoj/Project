@@ -398,7 +398,7 @@ a:hover {
 }
 /* The alert message box */
 .alert {
-    display:none;
+    /* display:none; */
     padding: 20px;
     color: white;
     width:50%;

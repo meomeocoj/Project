@@ -1,4 +1,4 @@
-<div class = "alert error-alert" id="alert">
+<div class = "alert error-alert" id="message">
     <span class = "close-btn" onClick="this.parentElement.style.display='none';">&times;</span>
     <div id="message"></div>
 </div>
