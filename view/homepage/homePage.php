@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost:88/Project/view/css/main.css">
+    <link rel="stylesheet" href="http://localhost/Project/view/css/main.css">
     <script type="text/javascript" src="http://localhost/Project/view/js/script.js"></script>
-    <script type="text/javascript" src="http://localhost:88/Project/view/js/search.js"></script>
+    <script type="text/javascript" src="http://localhost/Project/view/js/search.js"></script>
     <title>Homepage</title>
 </head>
 <?php

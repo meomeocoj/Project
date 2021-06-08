@@ -3,7 +3,7 @@ $connection = mysqli_connect('localhost', 'root', '');
 if(!$connection){
     die("Database Connection Failed" . mysqli_error($connection));
 }
-$selectdb = mysqli_select_db($connection, 'hotel2');
+$selectdb = mysqli_select_db($connection, 'hotel');
 if(!$selectdb){
     die("Database Selection Failed" . mysqli_error($connection));
 }
@@ -16,7 +16,7 @@ while($row = mysqli_fetch_assoc($result)){
     if ($count != 5) {
         echo "<li><a href='#'>".$row['name']."</a>";
     } else {
-        echo "<li hidden id='province_id'>http://localhost:88/Project/pagination/show/?id=".$row['province_id']."&page=1</a>";
+        echo "<li hidden id='province_id'>http://localhost/Project/pagination/show/?id=".$row['province_id']."&page=1</a>";
     }
     $count++;
 }
