@@ -86,7 +86,7 @@ class Hotel
     private function validateHotel($data) {
 
     }
-
+    // k truyền vào id, id sẽ = max id + 1
     public function addHotel($data)
     {
         $this->db->query("INSERT INTO `hotel` (id, name, address, latitude, longtitude, star, price, rank_score, manager_id, street_id) VALUES (:id, :name, :address, :latitude, :longtitude, :star, :price, :rank_score, :manager_id, :street_id)");
@@ -108,4 +108,23 @@ class Hotel
         }
     }
 
+    public function updateHotel($data) {
+        $this->db->query("UPDATE `hotel` SET name = :name, address = :address, latitude = :latitude, longtitude = :longtitude, star = :star, price = :price, rank_score = :rank_score, manager_id = :manager_id, street_id = :street_id WHERE id = :id");
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':address', $data['address']);
+        $this->db->bind(':latitude', $data['latitude']);
+        $this->db->bind(':longtitude', $data['longtitude']);
+        $this->db->bind(':star', $data['star']);
+        $this->db->bind(':price', $data['price']);
+        $this->db->bind(':rank_score', $data['rank_score']);
+        $this->db->bind(':manager_id', $data['manager_id']);
+        $this->db->bind(':street_id', $data['street_id']);
+
+        if ($this->db->executeStmt()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
