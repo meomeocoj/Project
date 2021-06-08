@@ -7,16 +7,33 @@
                 </svg></a>
             <div class="search-bar">
                 <form action="" method="POST" target="_blank"></form>
+                <!--
                 <input type="text" name="search-location" id="search" value="Tìm kiếm" onkeyup="showResult(this.value)">
+                -->
+
+                <!-- search suggestion add-on-->
+                <input type="text" value="Tìm kiếm" name="search" id="search" onfocus="if (this.value == 'Tìm kiếm') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Tìm kiếm';}">
+                    <div class="result" id = "results">
+                    </div>
+
+                <script>
+                    var results = document.getElementById("results");
+                    results.style.display='none';
+                </script>
+                <!-- end of search suggestion add-on-->
+
                 <button id="date" onClick="date()"><svg version="1.1" viewBox="0 0 14 16" class="mr--12 svg-icon svg-fill" style="width: 15px; height: 17px;">
                         <path pid="0" d="M9 2V1a1 1 0 112 0v1a3 3 0 013 3v8a3 3 0 01-3 3H3a3 3 0 01-3-3V5a3 3 0 013-3V1a1 1 0 112 0v1h4zM2 7v6a1 1 0 001 1h8a1 1 0 001-1V7H2z" fill="#666" fill-rule="evenodd"></path>
-                    </svg> Ngày</button>
-                <button id="search-btn" onClick="search()"><svg version="1.1" viewBox="0 0 15 15" class="svg-icon svg-fill" style="width: 20px; height: 20px; ">
+                    </svg> Ngày
+                </button>
+
+                <button id="search-btn" onClick="pagination_to_province()"><svg version="1.1" viewBox="0 0 15 15" class="svg-icon svg-fill" style="width: 20px; height: 20px; ">
                         <g stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd">
                             <path pid="0" d="M10 10l4 4"></path>
                             <circle pid="1" cx="6.5" cy="6.5" r="5.5"></circle>
                         </g>
-                    </svg></button>
+                    </svg>
+                </button>
                 </form>
             </div>
         </div>

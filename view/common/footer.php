@@ -83,3 +83,42 @@
 
         </div>
       </footer>
+
+<script type="text/javascript">
+    var results = document.getElementById("results");
+    var search = document.getElementById("search");
+
+    function getSearchResults(){
+        var searchVal = search.value;
+
+        if(!searchVal.length >= 1){
+            results.style.display='none';
+            return;
+        }
+
+        console.log('searchVal : ' + searchVal);
+        var xhr = new XMLHttpRequest();
+        var url = 'view/common/searchresult.php?search=' + searchVal;
+        // open function
+        xhr.open('GET', url, true);
+
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4 && xhr.status == 200){
+                var text = xhr.responseText;
+                console.log('response from searchresults.php : ' + xhr.responseText);
+                results.innerHTML = text;
+                results.style.display='block';
+            }
+        }
+
+        xhr.send();
+    }
+    search.addEventListener("input", getSearchResults);
+
+    function pagination_to_province() {
+        pagination_url = document.getElementById("province_id").textContent.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+        console.log(document.getElementById("province_id").textContent.replace(/^\s\s*/, '').replace(/\s\s*$/, ''));
+        location.href=pagination_url;
+    }
+</script>
+</script>

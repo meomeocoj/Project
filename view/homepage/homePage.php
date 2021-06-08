@@ -25,7 +25,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/message.php';
         <div class="mySlides fade"> 
             <a href="pagination/show/?id=11&page=1">
                 <div class="numbertext">1 / 3</div>
-                <img src="http://localhost/Project/view/image/HaNoi2.jpg" style="width:100%; height:400px">
+                <img src="http://localhost:88/Project/view/image/HaNoi2.jpg" style="width:100%; height:400px">
                 <div class="text">Hà Nội</div>
             </a>
         </div>
@@ -93,5 +93,36 @@ function showSlides(n) {
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/footer.php';
 ?>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
 
 </html>

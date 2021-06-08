@@ -396,6 +396,7 @@ a:hover {
         font-size: auto;
     }
 }
+<<<<<<< HEAD
 /* The alert message box */
 .alert {
     display:none;
@@ -431,3 +432,33 @@ a:hover {
   .success-alert{
       background-color:rgb(22, 192, 22)
   }
+=======
+
+.result{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    top: 70px;
+    padding: 10px 0px 10px 0px;
+    width: 24.6%;
+    position: absolute;
+    z-index: 3;
+    box-shadow: 1px 1px 4px rgb(0 0 0);
+    border-radius: 5px;
+    background: white;
+}
+
+.result a {
+    margin: auto;
+    color: #000;
+    display: block;
+    text-decoration: none;
+    background: white;
+    padding: 5px;
+    width: 80%;
+}
+
+.result a:hover {
+    background: #aaa;
+}
+>>>>>>> b9c51f3c02897d1bfac0f8b5553310f09c4b173e
