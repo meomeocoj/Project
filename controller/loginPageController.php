@@ -27,7 +27,7 @@ class loginPageController extends Controller
                 $_SESSION['role'] = $result->role;
                 // echo $_SESSION['username'];
                 // $_SESSION['role'];
-                redirect('../home', 'Welcome ' . $_SESSION['username'], 'success');
+                redirect('../', 'Welcome ' . $_SESSION['username'], 'success');
             } else {
                 echo "false";
                 redirect('../login/show', 'Wrong username or password', 'error');

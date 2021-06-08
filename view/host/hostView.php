@@ -34,7 +34,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
                 <div class="hotel-name">$name</div>
                 <div class="manipulation">
                     <a href="#"><button type="button" id="edit" onclick="editForm()">Edit</button></a>
-                    <a href="#"><button type="button" id="delete">Delete</button></a>
+                    <a href="http://localhost/Project/host/delete"><button type="button" id="delete">Delete</button></a>
                 </div>
             </div>
             <div class="hotel">
@@ -86,7 +86,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
     </main>
     <div class="add-form-container" id ="add-form-container">
         <div class="add-form">
-            <form action="#" method = "POST">
+            <form action="http://localhost/Project/host/add" method = "POST">
             <label for="fname" class = "label-block">Hotel name:</label>
             <input type="text" id="hotelName" name="hotelName" class ="input-block" required>
             <label for="fname" class = "label-block">Province:</label>
@@ -113,7 +113,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
     </div>
     <div class="add-form-container" id ="edit-form-container">
         <div class="add-form">
-            <form action="#" method = "POST">
+            <form action="http://localhost/Project/host/update" method = "POST">
             <label for="fname" class = "label-block">Name:</label>
             <input type="text" id="name" name="name" class ="input-block" value = "$name" required>
             <label for="fname" class = "label-block">Province:</label>
