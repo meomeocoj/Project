@@ -31,14 +31,14 @@
                 <div class="hotel-name">$name</div>
                 <div class="manipulation">
                     <a href="#"><button type="button" id="edit" onclick="editForm()">Edit</button></a>
-                    <a href="#"><button type="button" id="delete">Delete</button></a>
+                    <a href="#"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a>
                 </div>
             </div>
             <div class="hotel">
                 <div class="hotel-name">$name</div>
                 <div class="manipulation">
-                    <a href="#"><button type="button" id="edit" onclick="editForm()">Edit</button></a>
-                    <a href="#"><button type="button" id="delete">Delete</button></a>
+                    <a href="#"><button type="button" id="edit" onClick="editForm()">Edit</button></a>
+                    <a href="#"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
             <input type="text" id="num-room" name="num-room" class ="input-block" required>
             <div class="btns">
             <input type="submit" id="add-hotel-submit" value="Add" class="btn">
-            <button id = "cancel" onClick="exitAddForm()" class="btn">Cancel</button>
+            <input type="button" id = "cancel" onClick="exitAddForm()" class="btn" value = "Cancel">
             </div>
             </form>
         </div>
