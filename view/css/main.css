@@ -398,7 +398,6 @@ a:hover {
 }
 /* The alert message box */
 .alert {
-    /* display:none; */
     padding: 20px;
     color: white;
     width:50%;
@@ -407,7 +406,11 @@ a:hover {
     left:500px;
     border:1px solid #f2f2f2;
     border-radius: 20px;
-  }
+}
+#message-container{
+    display:none;
+    color:white;
+}
   
   /* The close button */
   .close-btn {
