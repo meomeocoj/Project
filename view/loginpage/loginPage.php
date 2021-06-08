@@ -27,7 +27,7 @@
             <label class="label-block" for="username">Email address</label>
             <input class="input-block" type="text" name="email" required>
             <label class="label-block" for="passWord">Password</label>
-            <input class="input-block" type="text" name="pass1" required>
+            <input class="input-block" type="password" name="pass1" required>
 
             <button type="submit" id="btn-login" name="btn-login" onClick="login()"> Login </button>
             <div id="forgot">

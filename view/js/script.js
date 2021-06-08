@@ -28,3 +28,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+let alert = document.getElementById("alert");
+alert.style.display="none";
+setTimeout(function() { alert.style.display='none'; },3000);

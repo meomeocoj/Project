@@ -4,6 +4,9 @@
     color: #000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
 
 a {
     text-decoration: none;
@@ -111,10 +114,11 @@ a:hover {
 /* Slideshow container */
 
 .slideshow-container {
-    width: 70%;
+    width: 60%;
     height: 400px;
     position: relative;
     margin: auto;
+    margin-top: 30px;
 }
 
 
@@ -392,3 +396,38 @@ a:hover {
         font-size: auto;
     }
 }
+/* The alert message box */
+.alert {
+    display:none;
+    padding: 20px;
+    color: white;
+    width:50%;
+    margin-bottom: 15px;
+    position: absolute;
+    left:500px;
+    border:1px solid #f2f2f2;
+    border-radius: 20px;
+  }
+  
+  /* The close button */
+  .close-btn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .close-btn:hover {
+    color: black;
+  }
+  .error-alert{
+      background-color:#f44336;
+  }
+  .success-alert{
+      background-color:rgb(22, 192, 22)
+  }

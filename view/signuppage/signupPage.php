@@ -27,11 +27,11 @@
             <label class ="label-block" for="username">Full name</label>
             <input class ="input-block" type="text" name="fullname" required>
             <label class ="label-block" for="email">Email address</label>
-            <input class ="input-block" type="text" name="email" required>
+            <input class ="input-block" type="email" name="email" required>
             <label class ="label-block" for="password">Password</label>
-            <input class ="input-block" type="text" name="pass1" required>
+            <input class ="input-block" type="password" name="pass1" required>
             <label class ="label-block" for="password">Verified password</label>
-            <input class ="input-block" type="text" name="pass2" required>
+            <input class ="input-block" type="password" name="pass2" required>
             <div class="host">
             <label class ="label-block">Type of customer</label>
             <input type="radio" id="guest" name="type" value="guest" checked="checked">

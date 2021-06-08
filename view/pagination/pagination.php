@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,9 @@
 </head>
 
 <body>
-    <?php include '../common/header.php'; ?>
+    <?php include '../common/header.php'; 
+      require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/message.php';
+    ?>
     <div class="container">
         <div class="filter">
                     <div id="total">
@@ -26,6 +27,7 @@
             </div>
         </div>
     </div>
+    
     <div class="boxes">
         <?php
             foreach($attribute as $att) {
