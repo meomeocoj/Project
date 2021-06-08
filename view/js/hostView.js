@@ -37,3 +37,12 @@ function exitEditForm(){
     editForm.style.opacity = 0;
     editForm.style.pointerEvents = "none";
 }
+function deleteFunction(){
+    let deleteBtn = confirm("Are you sure you want to delete?");
+    if(deleteBtn == true){
+
+    }
+    else{
+        
+    }
+}

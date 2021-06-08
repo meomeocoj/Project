@@ -34,14 +34,14 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
                 <div class="hotel-name">$name</div>
                 <div class="manipulation">
                     <a href="#"><button type="button" id="edit" onclick="editForm()">Edit</button></a>
-                    <a href="http://localhost/Project/host/delete"><button type="button" id="delete">Delete</button></a>
+                    <a href="http://localhost/Project/host/delete"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a>
                 </div>
             </div>
             <div class="hotel">
                 <div class="hotel-name">$name</div>
                 <div class="manipulation">
-                    <a href="#"><button type="button" id="edit" onclick="editForm()">Edit</button></a>
-                    <a href="#"><button type="button" id="delete">Delete</button></a>
+                    <a href="#"><button type="button" id="edit" onClick="editForm()">Edit</button></a>
+                    <a href="#"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a>
                 </div>
             </div>
         </div>
@@ -105,7 +105,8 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
             <label for="fname" class = "label-block">Number of room</label>
             <input type="text" id="num-room-add" name="numRoom" class ="input-block" required>
             <div class="btns">
-            <button type="submit" id="add-hotel-submit-add" value="Add" class="btn" name="addButton">add</button>
+            <input type="submit" id="add-hotel-submit" value="Add" class="btn" name ="addButton">
+            <input type="button" id = "cancel" onClick="exitAddForm()" class="btn" value = "Cancel">
             </div>
             </form>
             <button id = "cancel-add" onClick="exitAddForm()" class="btn">Cancel</button>
@@ -131,7 +132,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
             <label for="fname" class = "label-block">Number of room</label>
             <input type="text" id="num-room-edit" name="num-room" class ="input-block" value = "$numberRoom" required>
             <div class="btns">
-            <input type="submit" id="add-hotel-submit-edit" value="Edit" class="btn">
+            <input type="submit" id="add-hotel-submit-edit" value="Edit" class="btn" name="editButton">
             <button id = "cancel-edit" onClick="exitEditForm()" class="btn">Cancel</button>
             </div>
             </form>
