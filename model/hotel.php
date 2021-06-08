@@ -83,12 +83,41 @@ class Hotel
         return $result;
     }
 
-    private function validateHotel($data) {
-
+    private function maxIdStreet() {
+        $this->db->query("SELECT max(id) AS 'id' FROM `street`");
+        $result = $this->db->result();
+        return $result;
     }
+
+    private function validateHotel($data) {
+        if(is_numeric($data['latitude']) || is_numeric($data['longtitude']) || is_numeric($data['star']) || is_numeric($data['price']) || is_numeric($data['rank_score']) || is_numeric($data['manager_id']) ||  is_numeric($data['street_id'])) {
+            return false;
+        }
+        if(is_numeric($data['street_id']) > $this->maxIdStreet()->id) {
+            return false;
+        }
+        if($this->checkAddressExistence($data['address']))
+            return false;
+
+        return true;
+    }
+
+    private function checkAddressExistence ($address) {
+        $this->db->query("SELECT * FROM `hotel` WHERE address = :address");
+        $this->db->bind(':address', $address);
+        $result = $this->db->result();
+        if($result == NULL)
+            return false;
+        return true;
+    }
+
     // k truyền vào id, id sẽ = max id + 1
     public function addHotel($data)
     {
+        if($this->validateHotel($data) == false) {
+            return false;
+        }
+
         $this->db->query("INSERT INTO `hotel` (id, name, address, latitude, longtitude, star, price, rank_score, manager_id, street_id) VALUES (:id, :name, :address, :latitude, :longtitude, :star, :price, :rank_score, :manager_id, :street_id)");
         $this->db->bind(':id', $this->maxIdHotel()->id);
         $this->db->bind(':name', $data['name']);
@@ -109,6 +138,10 @@ class Hotel
     }
 
     public function updateHotel($data) {
+        if($this->validateHotel($data) == false) {
+            return false;
+        }
+
         $this->db->query("UPDATE `hotel` SET name = :name, address = :address, latitude = :latitude, longtitude = :longtitude, star = :star, price = :price, rank_score = :rank_score, manager_id = :manager_id, street_id = :street_id WHERE id = :id");
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':name', $data['name']);
