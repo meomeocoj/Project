@@ -25,7 +25,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/message.php';
         <div class="mySlides fade"> 
             <a href="pagination/show/?id=11&page=1">
                 <div class="numbertext">1 / 3</div>
-                <img src="http://localhost:88/Project/view/image/HaNoi2.jpg" style="width:100%; height:400px">
+                <img src="http://localhost/Project/view/image/HaNoi2.jpg" style="width:100%; height:400px">
                 <div class="text">Hà Nội</div>
             </a>
         </div>
