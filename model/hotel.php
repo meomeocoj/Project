@@ -27,7 +27,7 @@ class Hotel
     }
 
     public function getHotelById($id, $page) {
-        $this->db->query("SELECT DISTINCT url.hotel_id, hotel.name, MAX(url.min_price) AS 'price' FROM `hotel`, `url` WHERE hotel.province_id = :id AND url.hotel_id = hotel.id GROUP BY url.hotel_id LIMIT :offset, 20");
+        $this->db->query("SELECT DISTINCT hotel.id, hotel.name, hotel.price FROM `hotel`, `street`, `district`, `province` WHERE province.id = :id AND province.id = district.province_id AND district.id = street.district_id AND street.id = hotel.street_id LIMIT :offset, 20");
         $this->db->bind(':id', $id);
         $this->db->bind(':offset', ($page-1)*20);
         $results = $this->db->resultSet();
@@ -42,13 +42,13 @@ class Hotel
     }
 
     public function getNumberOfHotelById($id) {
-        $this->db->query("SELECT COUNT(*) as 'noOfHotel' FROM `hotel` WHERE province_id = :id");
+        $this->db->query("SELECT COUNT(hotel.id) as 'noOfHotel' FROM `hotel`, `street`, `district`, `province` WHERE province.id = :id AND province.id = district.province_id AND district.id = street.district_id AND street.id = hotel.street_id");
         $this->db->bind(':id', $id);
         $result = $this->db->result();
         return $result;
     }
-    public function getHotelInfoById($id) {
-        $this->db->query("SELECT hotel.*, MAX(url.min_price) AS 'price', province.name AS 'province' FROM `hotel`, `url`, `province` WHERE hotel.id = :id AND url.hotel_id = hotel.id AND province.id = hotel.province_id");
+    public function getHotelInfoByHotelId($id) {
+        $this->db->query("SELECT hotel.*, province.name AS 'province' FROM `hotel`, `street`, `district`, `province` WHERE hotel.id = :id AND province.id = district.province_id AND district.id = street.district_id AND street.id = hotel.street_id");
         $this->db->bind(':id', $id);
         $result = $this->db->result();
         return $result;
@@ -56,15 +56,56 @@ class Hotel
 
     public function getAllDistrict() {
         $this->db->query("SELECT name FROM `district`");
-        $result = $this->db->result();
         $results = $this->db->resultSet();
         return $results;
     }
 
     public function getAllProvince() {
         $this->db->query("SELECT name FROM `province`");
-        $result = $this->db->result();
         $results = $this->db->resultSet();
         return $results;
     }
+
+    //delete hotel by id
+    public function deleteHotel($id) {
+        $this->db->query("DELETE FROM `hotel` WHERE id = :id");
+        $this->db->bind(':id', $id);
+        if ($this->db->executeStmt()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    // max current id of hotel
+    private function maxIdHotel() {
+        $this->db->query("SELECT max(id) AS 'id' FROM `hotel`");
+        $result = $this->db->result();
+        return $result;
+    }
+
+    private function validateHotel($data) {
+
+    }
+
+    public function addHotel($data)
+    {
+        $this->db->query("INSERT INTO `hotel` (id, name, address, latitude, longtitude, star, price, rank_score, manager_id, street_id) VALUES (:id, :name, :address, :latitude, :longtitude, :star, :price, :rank_score, :manager_id, :street_id)");
+        $this->db->bind(':id', $this->maxIdHotel()->id);
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':address', $data['address']);
+        $this->db->bind(':latitude', $data['latitude']);
+        $this->db->bind(':longtitude', $data['longtitude']);
+        $this->db->bind(':star', $data['star']);
+        $this->db->bind(':price', $data['price']);
+        $this->db->bind(':rank_score', $data['rank_score']);
+        $this->db->bind(':manager_id', $data['manager_id']);
+        $this->db->bind(':street_id', $data['street_id']);
+
+        if ($this->db->executeStmt()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

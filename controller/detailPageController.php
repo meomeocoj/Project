@@ -7,7 +7,7 @@ class detailPageController extends Controller
         $hotel = new Hotel;
         $detailPage = $this->render("detailpage/detailpage");
         $id = substr($param,4);
-        $detailPage->attribute = $hotel->getHotelInfoById($id);
+        $detailPage->attribute = $hotel->getHotelInfoByHotelId($id);
         echo $detailPage;
     }
 }

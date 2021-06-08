@@ -84,7 +84,7 @@
 <!--sidenav-->
 <div class="sidenav">
     <p>Price: <b><?php
-            if($attribute->price == -1) {
+            if($attribute->price == 0) {
                 $attribute->price = rand(500000,1500000);
             }
             echo ceil($attribute->price/1000)*1000; ?></b> per night.</p>
