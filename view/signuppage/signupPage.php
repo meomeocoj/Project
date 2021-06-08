@@ -42,7 +42,7 @@
             <button type="submit" id="btn-login" name="btn-login" onClick="signUp()"> Sign Up </button>
 
             <div id="forgot">
-                <a href="view/homepage/homePage.php" style="text-align: center; margin-top:5px;">Home</a>
+                <a href="http://localhost/Project" style="text-align: center; margin-top:5px;">Home</a>
             </div>
         </form>
     </div>

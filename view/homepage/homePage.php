@@ -46,7 +46,6 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/message.php';
                 <div class="text">Vũng Tàu</div>
             </a>
         </div>
-
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
