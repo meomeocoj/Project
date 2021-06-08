@@ -90,7 +90,7 @@ a:hover{
 .container {
     position: relative;
     width: 70%;
-    height: 300px;
+    height: 400px;
     margin: auto;
 }
 
@@ -109,10 +109,10 @@ a:hover{
 .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -50px;
+    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -380,11 +380,12 @@ a:hover{
 }
 
 .overview {
-    margin-left: 15%; /* Same width as the sidebar + left position in px */
+    margin-left: 15%;
     margin-right: 40%;
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 250px 10px;
+    font-size: 28px;
+    padding: 0px 10px;
     top: 400px;
+    border-radius: 5px;
 }
 
 @media screen and (max-height: 450px) {
@@ -443,4 +444,76 @@ a:hover{
 
 .result a:hover {
     background: #aaa;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0px 10px 100px 10px;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+    width: 100%;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
 }

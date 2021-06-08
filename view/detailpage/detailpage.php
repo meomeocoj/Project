@@ -10,8 +10,9 @@
 </head>
 
 <body>
-<?php include '../common/header.php'?>
-
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
+?>
 <!--slide show-->
 <!-- Container for the image gallery -->
 <div class="container">
@@ -20,33 +21,33 @@
     <div class="mySlides">
         <div class="numbertext">1 / 6</div>
         <a href="localhost">
-        <img src="../../view/image/img1.png" href="localhost" style="width:100%" height="500px">
+        <img src="../../view/image/img1.png" href="localhost" style="width:100%" height="400px">
         </a>
     </div>
 
     <div class="mySlides">
         <div class="numbertext">2 / 6</div>
-        <img src="../../view/image/img2.png" style="width:100%" height="500px">
+        <img src="../../view/image/img2.png" style="width:100%" height="400px">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">3 / 6</div>
-        <img src="../../view/image/img3.png" style="width:100%" height="500px">
+        <img src="../../view/image/img3.png" style="width:100%" height="400px">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">4 / 6</div>
-        <img src="../../view/image/img4.png" style="width:100%" height="500px">
+        <img src="../../view/image/img4.png" style="width:100%" height="400px">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">5 / 6</div>
-        <img src="../../view/image/img5.png" style="width:100%" height="500px">
+        <img src="../../view/image/img5.png" style="width:100%" height="400px">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">6 / 6</div>
-        <img src="../../view/image/img6.png" style="width:100%" height="500px">
+        <img src="../../view/image/img6.png" style="width:100%" height="400px">
     </div>
 
     <!-- Next and previous buttons -->
@@ -61,30 +62,42 @@
     <!-- Thumbnail images -->
     <div class="row">
         <div class="column">
-            <img class="demo cursor" src="../../view/image/img1.png" style="width:100%" height="128px" onclick="currentSlide(1)" alt="1 / 6">
+            <img class="demo cursor" src="../../view/image/img1.png" style="width:100%" height="100px" onclick="currentSlide(1)" alt="1 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../../view/image/img2.png" style="width:100%" height="128px" onclick="currentSlide(2)" alt="2 / 6">
+            <img class="demo cursor" src="../../view/image/img2.png" style="width:100%" height="100px" onclick="currentSlide(2)" alt="2 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../../view/image/img3.png" style="width:100%" height="128px" onclick="currentSlide(3)" alt="3 / 6">
+            <img class="demo cursor" src="../../view/image/img3.png" style="width:100%" height="100px" onclick="currentSlide(3)" alt="3 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../../view/image/img4.png" style="width:100%" height="128px" onclick="currentSlide(4)" alt="4 / 6">
+            <img class="demo cursor" src="../../view/image/img4.png" style="width:100%" height="100px" onclick="currentSlide(4)" alt="4 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../../view/image/img5.png" style="width:100%" height="128px" onclick="currentSlide(5)" alt="5 / 6">
+            <img class="demo cursor" src="../../view/image/img5.png" style="width:100%" height="100px" onclick="currentSlide(5)" alt="5 / 6">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../../view/image/img6.png" style="width:100%" height="128px" onclick="currentSlide(6)" alt="6 / 6">
+            <img class="demo cursor" src="../../view/image/img6.png" style="width:100%" height="100px" onclick="currentSlide(6)" alt="6 / 6">
         </div>
     </div>
 </div>
 
 <!--sidenav-->
 <div class="sidenav">
-    <p>Price: <b>$PRICE</b> per night.</p>
-        <button type="button">BOOK NOW</button>
+    <p id="price"></p>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close">&times;</span>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <div class="overview">
@@ -117,7 +130,51 @@
     </div>
 </div>
 
+
+<!--footer-->
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/footer.php';
+?>
+</body>
+
 <script>
+    window.onload = function(){
+        price = "800000"
+        url = window.location.href;
+        hotel_id = url.match(/id=(.*)/)[1];
+        console.log(hotel_id)
+        /*document.getElementById('price').innerHTML = "Price: " + "<b>" + price + "</b>" + " vnd per night.";*/
+        window.location.href = "localhost:88/Project/detail/queryPrice/?" + hotel_id
+    };
+</script>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -132,9 +189,7 @@
             }
         });
     }
-</script>
 
-<script>
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -163,9 +218,8 @@
         dots[slideIndex-1].className += " active";
         captionText.innerHTML = dots[slideIndex-1].alt;
     }
+
+
 </script>
 
-<!--footer-->
-<?php include '../common/footer.php'?>
-</body>
 </html>

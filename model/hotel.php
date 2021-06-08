@@ -14,10 +14,15 @@ class Hotel
         $results = $this->db->resultSet();
         return $results;
     }
-    public function getDetailHotel()
+    public function getDetailHotel($id)
     {
-
+        //Only return Price for now
+        $this->db->query("SELECT price FROM `hotel` WHERE id = $id");
+        $this->db->bind('id', $id);
+        $result = $this->db->result();
+        return $result;
     }
+
     public function getSearchResult($data)
     {
         $this->db->query("SELECT DISTINCT address FROM hotel WHERE name LIKE '%$data%' ORDER BY id LIMIT 0,5");
@@ -41,4 +46,5 @@ class Hotel
         $result = $this->db->result();
         return $result;
     }
+
 }
