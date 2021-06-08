@@ -22,7 +22,7 @@
         <h2 style="text-align: center;">Login LuxStay</h2>
         
             <label class ="label-block" for="username">Email address</label>
-            <input class ="input-block" type="text" name="email" required>
+            <input class ="input-block" type="email" name="email" required>
             <label class ="label-block" for="passWord">Password</label>
             <input class ="input-block" type="password" name="pass1" required>
 

@@ -26,12 +26,10 @@ class User
     {
         $this->db->query("SELECT * FROM user WHERE email = :email");
         $this->db->bind(':email', $user['email']);
-//        $this->db->bind(':password', $user['password']);
+        //$this->db->bind(':password', $user['password']);
         $result = $this->db->result();
-        password_verify($user['password'], $result -> password);
-        return $result;
-       
+        password_verify($user['password'], $result->password);
 
+        return $result;
     }
-    
 }

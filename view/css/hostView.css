@@ -111,15 +111,18 @@
   }
   .container .list-hotel .hotel .hotel-name{
     width:90%;
+    padding: 15px;
 }
   .container .list-hotel .hotel .manipulation{
       border-left: 1px solid #4e4b4b;
       width:10%;
       display:flex;
+      justify-content:space-between;
+      padding: 15px;
   }
   .container .list-hotel .hotel .manipulation a{
         display: inline-block;
-        width:50%;
+        width:45%;
   }
   .container .list-hotel .hotel .manipulation a button{
       display: inline-block;
