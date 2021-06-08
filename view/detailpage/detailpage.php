@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../view/css/detailPage.css">
+    <link rel="stylesheet" href="http://localhost:88/Project/view/css/detailPage.css">
     <title>Detailpage</title>
 </head>
 
@@ -41,7 +41,11 @@
 
     <div class="mySlides">
         <div class="numbertext">5 / 6</div>
+        <img src="../../view/image/img5.png" style="width:100%" height="500px">
     </div>
+
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
         <img src="../../view/image/img6.png" style="width:100%" height="500px">
     </div>
 

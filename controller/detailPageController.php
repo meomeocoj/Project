@@ -1,5 +1,6 @@
 <?php
 class   detailPageController extends Controller
+
 {
     public function show($param)
     {

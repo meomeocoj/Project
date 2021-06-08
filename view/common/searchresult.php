@@ -16,7 +16,7 @@ while($row = mysqli_fetch_assoc($result)){
     if ($count != 5) {
         echo "<li><a href='#'>".$row['name']."</a>";
     } else {
-        echo "<li hidden id='province_id'>pagination/show/?id=".$row['province_id']."&page=1</a>";
+        echo "<li hidden id='province_id'>http://localhost:88/Project/pagination/show/?id=".$row['province_id']."&page=1</a>";
     }
     $count++;
 }
