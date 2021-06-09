@@ -2,9 +2,9 @@
     <span class = "close-btn" onClick="cancelBtn()">&times;</span>
     <div id="message"></div>
 </div> -->
-<div class = "alert success-alert" id="alert">
-    <span class = "close-btn" onClick="this.parentElement.style.display='none';">&times;</span>
-    <div id="message"><?php displayMessage(); ?></div>
+<div class = "alert success-alert" id="message-container">
+    <span class = "close-btn" onClick="this.parentElement.style.display='none'; ">&times;</span>
+    <div id="message"><?php displayMessage() ?></div>
 </div>
 <script>
     let message = document.getElementById("message");

@@ -98,7 +98,7 @@
 
         console.log('searchVal : ' + searchVal);
         var xhr = new XMLHttpRequest();
-        var url = 'view/common/searchresult.php?search=' + searchVal;
+        var url = 'http://localhost:88/Project/view/common/searchresult.php?search=' + searchVal;
         // open function
         xhr.open('GET', url, true);
 

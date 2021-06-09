@@ -6,6 +6,7 @@ class hostPageController extends Controller
         require 'model/hotel.php';
         $hotel = new Hotel;
         $hostPage = $this->render("host/hostView");
+        $hostPage->provinces = $hotel->getAllProvince();
         // $hostPage->hotels = $hotel->getAllHotels();
         // if (!isset($_SESSION['login'])) {
         //     $_SESSION['login'] = false;

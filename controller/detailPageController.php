@@ -10,4 +10,28 @@ class   detailPageController extends Controller
         $detailPage->attribute = $hotel->getHotelInfoById($id);
         echo $detailPage;
     }
+
+    public function book()
+    {
+        require 'model/receipt.php';
+        $receipt = new Receipt;
+
+        echo $_POST['btn-book'];
+
+        if (isset($_POST['btn-book'])) {
+            echo 'a';
+            $data = array();
+            $data['email'] = $_POST['email'];
+            $data['checkin_date'] = $_POST['checkinDate'];
+            $data['checkout_date'] = $_POST['checkoutDate'];
+            $data['booking_date'] = $_POST['bookingDate'];
+            $data['payment'] = $_POST['totalPrice'];
+            $data['hotel_id'] = $_POST['hotel_id'];
+            if ($receipt->insert($data)) {
+                redirect('../detail/show', 'Booking success!', 'success');
+            } else {
+                redirect('../', 'Something went wrong', 'error');
+            }
+        }
+    }
 }

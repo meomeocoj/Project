@@ -37,8 +37,8 @@ function displayMessage()
                 echo  $message;
             }
         }
-        unset($_SESSION['message']);
-        unset($_SESSION['message_type']);
+        $_SESSION['message'] = '';
+        $_SESSION['message_type'] = '';
     } else {
         echo '';
     }

@@ -41,6 +41,11 @@ class Hotel
         $result = $this->db->result();
         return $result;
     }
+    public function getAllProvince(){
+        $this->db->query("SELECT province.name FROM `province`");
+        $results = $this->db->resultSet();
+        return $results;
+    }
 
     public function getNumberOfHotelById($id) {
         $this->db->query("SELECT COUNT(*) as 'noOfHotel' FROM `hotel` WHERE province_id = :id");

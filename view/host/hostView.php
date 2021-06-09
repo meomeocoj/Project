@@ -91,7 +91,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
             <input type="text" id="hotelName" name="hotelName" class ="input-block" required>
             <label for="fname" class = "label-block">Province:</label>
             <select name="provinceName" onchange="filter(this.value)" class="input-block">
-                <option value="$location">$province</option>
+            <? foreach ($provinces as $province)
+                echo "<option value=' .$province .'>'.$province.'</option>"
+                ?>
             </select>
             <label for="fname" class = "label-block">District:</label>
             <select name="districtName" onchange="filter(this.value)" class="input-block">
