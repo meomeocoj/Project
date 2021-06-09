@@ -19,16 +19,15 @@ class   detailPageController extends Controller
         echo $_POST['btn-book'];
 
         if (isset($_POST['btn-book'])) {
-            echo 'a';
             $data = array();
             $data['email'] = $_POST['email'];
-            $data['checkin_date'] = $_POST['checkinDate'];
-            $data['checkout_date'] = $_POST['checkoutDate'];
-            $data['booking_date'] = $_POST['bookingDate'];
-            $data['payment'] = $_POST['totalPrice'];
+            $data['checkin_date'] = $_POST['checkin-date'];
+            $data['checkout_date'] = $_POST['checkout-date'];
+            $data['booking_date'] = (date("Y/m/d", $t));
+            $data['payment'] = $_POST['tot-price'];
             $data['hotel_id'] = $_POST['hotel_id'];
             if ($receipt->insert($data)) {
-                redirect('../detail/show', 'Booking success!', 'success');
+                redirect('../', 'Booking success!', 'success');
             } else {
                 redirect('../', 'Something went wrong', 'error');
             }

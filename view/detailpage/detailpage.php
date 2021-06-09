@@ -110,8 +110,8 @@
                     <label class="label-block" for="">Total price: </label>
                     <input class="input-block" type="text" id="totalPrice" name="tot-price"> </br>
                     <input class="input-block" type="hidden" id="hotel_id" name="hotel_id"> </br>
-                    <input class="input-block" type="hidden" id="bookingDate" name="bookingDate" value="CurrentTime">
-                    <button type="submit" id="btn-book" name="book" onClick="book()" name="btn-book"> Confirm </button>
+                    <input class="input-block" type="hidden" id="bookingDate" name="booking-date" value="CurrentTime">
+                    <button type="submit" id="btn-book" onClick="book()" name="btn-book"> Confirm </button>
                 </div>
             </div>
         </form>

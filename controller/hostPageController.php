@@ -7,6 +7,7 @@ class hostPageController extends Controller
         $hotel = new Hotel;
         $hostPage = $this->render("host/hostView");
         $hostPage->provinces = $hotel->getAllProvince();
+        $hostPage->districts = $hotel->getAllDistrict();
         // $hostPage->hotels = $hotel->getAllHotels();
         // if (!isset($_SESSION['login'])) {
         //     $_SESSION['login'] = false;
@@ -15,6 +16,12 @@ class hostPageController extends Controller
         //     $_SESSION['role'] = NULL;
         // }
         echo $hostPage;
+        foreach ($hostPage->provinces as $province){
+            echo $province->name;
+        }
+        foreach ($hostPage->districts as $district){
+            echo $district->name;
+        }
     }
     public function add()
     {

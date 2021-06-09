@@ -42,7 +42,12 @@ class Hotel
         return $result;
     }
     public function getAllProvince(){
-        $this->db->query("SELECT province.name FROM `province`");
+        $this->db->query("SELECT province.name FROM province");
+        $results = $this->db->resultSet();
+        return $results;
+    }
+    public function getAllDistrict(){
+        $this->db->query("SELECT district.name FROM district");
         $results = $this->db->resultSet();
         return $results;
     }

@@ -92,7 +92,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
             <label for="fname" class = "label-block">Province:</label>
             <select name="provinceName" onchange="filter(this.value)" class="input-block">
             <? foreach ($provinces as $province)
-                echo "<option value=' .$province .'>'.$province.'</option>"
+                echo "<option value=' .$province->name .'>'.$province->name.'</option>"
                 ?>
             </select>
             <label for="fname" class = "label-block">District:</label>
