@@ -129,7 +129,7 @@
             <input type="text" id="num-room" name="num-room" class ="input-block" value = "$numberRoom" required>
             <div class="btns">
             <input type="submit" id="add-hotel-submit" value="Edit" class="btn">
-            <button id = "cancel" onClick="exitEditForm()" class="btn">Cancel</button>
+            <input type="button" id = "cancel" onClick="exitAddForm()" class="btn" value = "Cancel">
             </div>
             </form>
         </div>

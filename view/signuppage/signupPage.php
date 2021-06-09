@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +27,8 @@
             <input class ="input-block" type="text" name="fullname" required>
             <label class ="label-block" for="email">Email address</label>
             <input class ="input-block" type="email" name="email" required>
+            <label class ="label-block" for="email">Phone Number</label>
+            <input class ="input-block" type="tel" name="tel" required>
             <label class ="label-block" for="password">Password</label>
             <input class ="input-block" type="password" name="pass1" required>
             <label class ="label-block" for="password">Verified password</label>
@@ -40,7 +41,6 @@
             <label for="host" >host</label>
             </div>
             <button type="submit" id="btn-login" name="btn-login" onClick="signUp()"> Sign Up </button>
-
             <div id="forgot">
                 <a href="view/homepage/homePage.php" style="text-align: center; margin-top:5px;">Home</a>
             </div>

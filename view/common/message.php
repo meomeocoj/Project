@@ -1,9 +1,9 @@
-<div class = "alert error-alert" id="message-container">
+<!-- <div class = "alert error-alert" id="message-container-error">
     <span class = "close-btn" onClick="cancelBtn()">&times;</span>
-    <div id="message">222</div>
+    <div id="message"></div>
 </div>
-<!-- <div class = "alert success-alert" id="alert">
-    <span class = "close-btn" onClick="this.parentElement.style.display='none';">&times;</span>
+<div class = "alert success-alert" id="message-container-success">
+    <span class = "close-btn" onClick="cancelBtn()">&times;</span>
     <div id="message">This is an message</div>
 </div> -->
 <script>
