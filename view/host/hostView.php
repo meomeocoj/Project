@@ -47,16 +47,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="pagination">
-                    <a href="#">&laquo;</a>
-                    <a href="#">1</a>
-                    <a class="active" href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">&raquo;</a>
-                </div>
             </div>
             <!--view orders=-->
             <div class="container-order">
@@ -65,7 +55,7 @@
                     <h3 id="function">Function</h3>
                 </div>
                 <div class="list-hotel">
-                    <?php foreach ($receipts as $receipt): ?>
+                    <?php foreach ($receipts as $receipt) : ?>
                         <div class="hotel">
                             <div class="hotel-name"><?php echo "<i>Booking</i> for hotel ID " . $receipt->hotel_id; ?></div>
                             <div class="manipulation">
@@ -75,15 +65,7 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="pagination">
-                    <a href="#">&laquo;</a>
-                    <a href="#">1</a>
-                    <a class="active" href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">&raquo;</a>
+
                 </div>
             </div>
         </div>
@@ -116,31 +98,35 @@
                     <input type="button" id="cancel" onClick="exitAddForm()" class="btn" value="Cancel">
                 </div>
             </form>
-            <button id="cancel-add" onClick="exitAddForm()" class="btn">Cancel</button>
+            <button id="cancel-add" onClick="exitEditForm()" class="btn">Cancel</button>
         </div>
     </div>
     <div class="add-form-container" id="edit-form-container">
         <div class="add-form">
-            <form action="http://localhost/Project/host/update" method="POST">
+            <form action="#" method="POST">
                 <label for="fname" class="label-block">Name:</label>
                 <input type="text" id="name" name="name" class="input-block" value="$name" required>
                 <label for="fname" class="label-block">Province:</label>
                 <select name="province" onchange="filter(this.value)" class="input-block">
-                    <option value="$location">$province</option>
+                    <?php foreach ($provinces as $province) : ?>
+                        <option value="<?php echo $province->name ?>"><?php echo $province->name ?></option>
+                    <?php endforeach; ?>
                 </select>
                 <label for="fname" class="label-block">District:</label>
                 <select name="province" onchange="filter(this.value)" class="input-block">
-                    <option value="$district">$district</option>
+                    <?php foreach ($districts as $district) : ?>
+                        <option value="<?php echo $district->name ?>"><?php echo $district->name ?></option>
+                    <?php endforeach; ?>
                 </select>
                 <label for="fname" class="label-block">Address:</label>
-                <input type="text" id="address-edit" name="address" class="input-block" value="$address" required>
+                <input type="text" id="address" name="address" class="input-block" value="$address" required>
                 <label for="fname" class="label-block">Price:</label>
-                <input type="text" id="price-edit" name="price" class="input-block" value="$price" required>
+                <input type="text" id="price" name="price" class="input-block" value="$price" required>
                 <label for="fname" class="label-block">Number of room</label>
-                <input type="text" id="num-room-edit" name="num-room" class="input-block" value="$numberRoom" required>
+                <input type="text" id="num-room" name="num-room" class="input-block" value="$numberRoom" required>
                 <div class="btns">
-                    <input type="submit" id="add-hotel-submit-edit" value="Edit" class="btn" name="editButton">
-                    <button id="cancel-edit" onClick="exitEditForm()" class="btn">Cancel</button>
+                    <input type="submit" id="add-hotel-submit" value="Edit" class="btn">
+                    <input type="button" id="cancel" onClick="exitEditForm()" class="btn" value="Cancel">
                 </div>
             </form>
         </div>
