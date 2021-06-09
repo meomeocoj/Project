@@ -9,7 +9,7 @@
     <script type="text/javascript" src="../view/js/script.js"></script>
     <title>Login</title>
 </head>
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/message.php'; ?>
+
 <body> 
     <!--Content-->
 

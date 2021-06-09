@@ -21,31 +21,21 @@
             <button type="button" name="view-orders" value="view-orders" id="view-orders" onClick="viewOrder()">View Orders</button>
         </div>
         <div class="search-hotel-add-hotel">
-            <input type="text" name="search-hotel" id="search-hotel" value="Hotel name ...">
+            <input type="text" name="search-hotel" id="search-hotel" value="Hotel name">
             <button type="button" id="add-hotel-btn" onClick="addHotel()"> Add </button>
         </div>
         <div class="absolute-container">
-            <!--container-list-->
             <div class="container-list">
                 <div class="name-function">
                     <h3 id="name">Name</h3>
                     <h3 id="function">Function</h3>
                 </div>
                 <div class="list-hotel">
-                    <div class="hotel">
-                        <div class="hotel-name">$name</div>
-                        <div class="manipulation">
-                            <a href="#"><button type="button" id="edit" onclick="editForm()">Edit</button></a>
-                            <a href="http://localhost/Project/host/delete"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a>
-                        </div>
-                    </div>
-                    <div class="hotel">
-                        <div class="hotel-name">$name</div>
-                        <div class="manipulation">
-                            <a href="#"><button type="button" id="edit" onClick="editForm()">Edit</button></a>
-                            <a href="#"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a>
-                        </div>
-                    </div>
+                    <?php
+                    foreach ($hotels as $hotel) {
+                        echo '<div class="hotel"><div class="hotel-name">'.$hotel->name.'</div><div class="manipulation"><a href="#"><button type="button" id="edit" onclick="editForm()">Edit</button></a><a href="http://localhost/Project/host/delete/?id='.$hotel->id.'"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a></div></div>';
+                    }
+                    ?>
                 </div>
             </div>
             <!--view orders=-->
@@ -65,10 +55,6 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
-
-                </div>
-            </div>
-        </div>
     </main>
     <div class="add-form-container" id="add-form-container">
         <div class="add-form">
@@ -98,7 +84,6 @@
                     <input type="button" id="cancel" onClick="exitAddForm()" class="btn" value="Cancel">
                 </div>
             </form>
-            <button id="cancel-add" onClick="exitEditForm()" class="btn">Cancel</button>
         </div>
     </div>
     <div class="add-form-container" id="edit-form-container">

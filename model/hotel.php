@@ -46,6 +46,7 @@ class Hotel
         $results = $this->db->resultSet();
         return $results;
     }
+
     public function getAllDistrict(){
         $this->db->query("SELECT district.name FROM district");
         $results = $this->db->resultSet();
@@ -63,5 +64,53 @@ class Hotel
         $this->db->bind(':id', $id);
         $result = $this->db->result();
         return $result;
+    }
+    public function getHotelInfoByManagerId() {
+        $this->db->query("SELECT * FROM hotel WHERE street_id = :id");
+        $this->db->bind(':id', 30);
+        $results = $this->db->resultSet();
+        return $results;
+    }
+    public function getDistrictByName($name) {
+        $this->db->query("SELECT id FROM `district` WHERE name = :name");
+        $this->db->bind(':name', $name);
+        $result = $this->db->result();
+        return $result;
+    }
+
+    public function getProvinceByName($name) {
+        $this->db->query("SELECT id FROM `province` WHERE name = :name");
+        $this->db->bind(':name', $name);
+        $result = $this->db->result();
+        return $result;
+    }
+    public function getMaxHotelId() {
+        $this->db->query("SELECT MAX(id) AS 'ID' FROM `hotel`");
+        $result = $this->db->result();
+        return $result;
+    }
+    public function addHotel($data) {
+        $id = $this->getMaxHotelId()->ID + 1;
+        $this->db->query("INSERT INTO hotel (id, name, address, manager_id, province_id) VALUES (:id, :name, :address, :manager_id, :province_id)");
+        $this->db->bind(':id', $id);
+        $this->db->bind(':name', $data['hotelName']);
+        $this->db->bind(':address', $data['addressName']);
+        $this->db->bind(':manager_id', 30);
+        //$this->db->bind(':district_id', $this->getDistrictByName($data['districtName'])->id);
+        $this->db->bind(':province_id', $data['provinceId']);
+        if ($this->db->executeStmt()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function deleteHotel($id) {
+        $this->db->query("DELETE FROM hotel WHERE id = :id");
+        $this->db->bind(':id', $id);
+        if ($this->db->executeStmt()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
