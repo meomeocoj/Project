@@ -30,30 +30,11 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
             <h3 id="function">Function</h3>
         </div>
         <div class="list-hotel">
-            <div class="hotel">
-                <div class="hotel-name">$name</div>
-                <div class="manipulation">
-                    <a href="#"><button type="button" id="edit" onclick="editForm()">Edit</button></a>
-                    <a href="http://localhost/Project/host/delete"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a>
-                </div>
-            </div>
-            <div class="hotel">
-                <div class="hotel-name">$name</div>
-                <div class="manipulation">
-                    <a href="#"><button type="button" id="edit" onClick="editForm()">Edit</button></a>
-                    <a href="#"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a class="active" href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">&raquo;</a>
+            <?php
+                foreach ($hotels as $hotel) {
+                    echo '<div class="hotel"><div class="hotel-name">'.$hotel->name.'</div><div class="manipulation"><a href="#"><button type="button" id="edit" onclick="editForm()">Edit</button></a><a href="http://localhost/Project/host/delete"><button type="button" id="delete" onClick="deleteFunction()">Delete</button></a></div></div>';
+                }
+            ?>
         </div>
         </div>
         <!--view orders=-->
@@ -91,8 +72,11 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Project/view/common/header.php';
             <input type="text" id="hotelName" name="hotelName" class ="input-block" required>
             <label for="fname" class = "label-block">Province:</label>
             <select name="provinceName" onchange="filter(this.value)" class="input-block">
-            <? foreach ($provinces as $province)
-                echo "<option value=' .$province->name .'>'.$province->name.'</option>"
+            <?php
+            echo '<option value="">Province</option>';
+            foreach ($provinces as $province) {
+                echo '<option value="'. $province->name .'">'. $province->name.'</option>';
+            }
                 ?>
             </select>
             <label for="fname" class = "label-block">District:</label>

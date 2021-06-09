@@ -7,6 +7,7 @@ class hostPageController extends Controller
         $hotel = new Hotel;
         $hostPage = $this->render("host/hostView");
         $hostPage->provinces = $hotel->getAllProvince();
+        $hostPage->hotels = $hotel->getHotelInfoByManagerId();
 //        $hostPage->districts = $hotel->getAllDistrict();
         // $hostPage->hotels = $hotel->getAllHotels();
         // if (!isset($_SESSION['login'])) {
