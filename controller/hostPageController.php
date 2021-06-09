@@ -7,7 +7,7 @@ class hostPageController extends Controller
         $hotel = new Hotel;
         $hostPage = $this->render("host/hostView");
         $hostPage->provinces = $hotel->getAllProvince();
-        $hostPage->districts = $hotel->getAllDistrict();
+//        $hostPage->districts = $hotel->getAllDistrict();
         // $hostPage->hotels = $hotel->getAllHotels();
         // if (!isset($_SESSION['login'])) {
         //     $_SESSION['login'] = false;
@@ -16,28 +16,29 @@ class hostPageController extends Controller
         //     $_SESSION['role'] = NULL;
         // }
         echo $hostPage;
-        foreach ($hostPage->provinces as $province){
-            echo $province->name;
-        }
-        foreach ($hostPage->districts as $district){
-            echo $district->name;
-        }
+//        foreach ($hostPage->provinces as $province){
+//            echo $province->name;
+//        }
+//        foreach ($hostPage->districts as $district){
+//            echo $district->name;
+//        }
     }
     public function add()
     {
         require 'model/hotel.php';
         $hotel = new Hotel;
-        $user = new User;
+//        $user = new User;
         if (isset($_POST['addButton'])) {
             $data = array();
             $data['hotelName'] = $_POST['hotelName'];
             $data['provinceName'] = $_POST['provinceName'];
             $data['districtName'] = $_POST['districtName'];
+            $data['provinceId'] = $hotel->getProvinceByName($_POST['provinceName'])->id;
             $data['addressName'] = $_POST['addressName'];
             $data['numRoom'] = $_POST['numRoom'];
             $data['priceValue'] = $_POST['priceValue'];
-            if ($hotel->add($data)) {
-                redirect('../login/show', 'Your account has been created, log in to continue', 'success');
+            if ($hotel->addHotel($data)) {
+                redirect('../host/show', 'Your account has been created, log in to continue', 'success');
             } else {
                 redirect('../home', 'Something went wrong', 'error');
             }
