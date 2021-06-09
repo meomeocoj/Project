@@ -27,7 +27,10 @@ class homePageController extends Controller
         }
     }
     public function logout(){
-        session_destroy();
+        $_SESSION['login'] = false;
+        $_SESSION['username'] = NULL;
+        $_SESSION['login'] = NUll;
+        $_SESSION['role'] = NULL;
         redirect('../home', '', '');
     }
 }

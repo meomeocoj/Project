@@ -4,8 +4,13 @@ class hostPageController extends Controller
     public function show()
     {
         require 'model/hotel.php';
+        require 'model/receipt.php';
         $hotel = new Hotel;
+        $receipt = new Receipt;
+        $data = $_SESSION['email'];
         $hostPage = $this->render("host/hostView");
+
+        
         $hostPage->provinces = $hotel->getAllProvince();
         $hostPage->districts = $hotel->getAllDistrict();
         // $hostPage->hotels = $hotel->getAllHotels();
@@ -15,13 +20,9 @@ class hostPageController extends Controller
         //     $_SESSION['login'] = NUll;
         //     $_SESSION['role'] = NULL;
         // }
+        $hostPage->receipts = $receipt->getReceiptHotelId($data);
+
         echo $hostPage;
-        foreach ($hostPage->provinces as $province){
-            echo $province->name;
-        }
-        foreach ($hostPage->districts as $district){
-            echo $district->name;
-        }
     }
     public function add()
     {

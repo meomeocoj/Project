@@ -14,7 +14,7 @@ class signupPageController extends Controller
         $user = new User;
         if (isset($_POST['btn-login'])) {
             $data = array();
-            $data['fullname'] = $_POST['fullname'];
+            $data['name'] = $_POST['name'];
             $data['email'] = $_POST['email'];
             $pwd = $_POST['pass1'];
             $data['role'] = $_POST['type'];

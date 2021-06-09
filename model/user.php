@@ -10,8 +10,8 @@ class User
 
     public function insert($data)
     {
-        $this->db->query("INSERT INTO user (fullname, email, password, role) VALUES (:fullname,:email,:password,:role)");
-        $this->db->bind(':fullname', $data['fullname']);
+        $this->db->query("INSERT INTO user (name, email, password, role) VALUES (:name,:email,:password,:role)");
+        $this->db->bind(':name', $data['name']);
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
         $this->db->bind(':role', $data['role']);

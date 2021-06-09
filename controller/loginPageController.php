@@ -25,6 +25,7 @@ class loginPageController extends Controller
                 $_SESSION['username'] = $result->name;
                 $_SESSION['login'] = true;
                 $_SESSION['role'] = $result->role;
+                $_SESSION['email'] = $result->email;
                 // echo $_SESSION['username'];
                 // $_SESSION['role'];
                 redirect('../', 'Welcome ' . $_SESSION['username'], 'success');

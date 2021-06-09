@@ -25,7 +25,7 @@
             </div>
             <h2 style="text-align: center;">Login LuxStay</h2>
             <label class ="label-block" for="username">Full name</label>
-            <input class ="input-block" type="text" name="fullname" required>
+            <input class ="input-block" type="text" name="name" required>
             <label class ="label-block" for="email">Email address</label>
             <input class ="input-block" type="email" name="email" required>
             <label class ="label-block" for="password">Password</label>

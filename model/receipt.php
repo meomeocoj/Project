@@ -26,6 +26,10 @@ class Receipt
             return false;
         }
     }
-
-
+    public function getReceiptHotelId($data){
+        $this->db->query("SELECT hotel_id FROM receipt WHERE email = :email");
+        $this->db->bind(':email', $data);
+        $results = $this->db->resultSet();
+        return $results;
+    }
 }
