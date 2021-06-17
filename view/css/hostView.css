@@ -1,0 +1,225 @@
+.pagination {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+
+/* Style the active/current link */
+
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+/* Add a grey background color on mouse-over */
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+
+/*table list*/
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container .option {
+    width: 12%;
+    border: 1px solid #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px 5px 0px;
+}
+
+.container .option #list-hotel {
+    display: inline-block;
+    width: 50%;
+    border: none;
+    padding: 10px 0px 10px 0px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.container .option #view-orders {
+    display: inline-block;
+    width: 50%;
+    border: none;
+    padding: 10px 0px 10px 0px;
+    border-radius: 4px;
+    border-left: 1px solid #adaaaa;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.container .option #list-hotel:hover {
+    background-color: rgb(19, 146, 146);
+    color: #f2f2f2;
+}
+
+.container .option #view-orders:hover {
+    background-color: rgb(19, 146, 146);
+    color: #f2f2f2;
+}
+
+.container .search-hotel-add-hotel {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .search-hotel-add-hotel #search-hotel {
+    width: 30%;
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+}
+
+.container .search-hotel-add-hotel #add-hotel-btn {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.container .name-function {
+    margin-top: 10px;
+    width: 80%;
+    display: flex;
+}
+
+.container .name-function #name {
+    width: 90%;
+}
+
+.container .name-function #function {
+    width: 10%;
+    text-align: center;
+}
+
+.container .list-hotel {
+    margin-top: 20px;
+    width: 80%;
+    border: 1px solid #d1cece;
+    border-radius: 4px;
+}
+
+.container .list-hotel .hotel {
+    width: 100%;
+    display: flex;
+    border-bottom: solid #f2f2f2;
+}
+
+.container .list-hotel .hotel .hotel-name {
+    width: 90%;
+    padding: 15px;
+}
+
+.container .list-hotel .hotel .manipulation {
+    border-left: 1px solid #4e4b4b;
+    /* width: 10%; */
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.container .list-hotel .hotel .manipulation a {
+    display: inline-block;
+    width: 45%;
+}
+
+.container .list-hotel .hotel .manipulation a button {
+    display: inline-block;
+    /* width:95%; */
+    padding: 5px;
+}
+
+.container .absolute-container {
+    position: relative;
+    height: 800px;
+}
+
+.container .absolute-container .container-order {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+.container .absolute-container .container-list {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+}
+
+.add-form-container {
+    opacity: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    background-color: rgba(255, 255, 255, 0.459);
+    pointer-events: none;
+}
+
+.label-block {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    padding: 5px;
+}
+
+.input-block {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.add-form-container .add-form {
+    width: 30vw;
+    padding: 50px;
+    background-color: rgb(230, 227, 227);
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 5px 10px grey;
+}
+
+.add-from-container .add-form form select {
+    width: 100%;
+}
+
+.btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
